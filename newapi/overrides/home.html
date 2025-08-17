@@ -7,14 +7,14 @@
 {% block styles %}
 {{ super() }}
 <style>
-  /* 首页专用样式 */
+  /* 首页专用样式 - Semi Design 风格 */
   .hero-section {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: rgb(0, 100, 250);
     color: white;
-    padding: 4rem 2rem;
+    padding: 80px 32px;
     text-align: center;
-    margin: -2rem -2rem 2rem -2rem;
-    border-radius: 0 0 2rem 2rem;
+    margin: -32px -32px 32px -32px;
+    border-radius: 0 0 12px 12px;
     position: relative;
     overflow: hidden;
   }
@@ -61,104 +61,113 @@
   .hero-button {
     display: inline-flex;
     align-items: center;
-    padding: 0.75rem 2rem;
-    background: rgba(255, 255, 255, 0.2);
+    padding: 8px 16px;
+    background: rgba(255, 255, 255, 0.15);
     color: white;
     text-decoration: none;
-    border-radius: 2rem;
-    font-weight: 600;
-    transition: all 0.3s ease;
-    backdrop-filter: blur(10px);
-    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 6px;
+    font-weight: 500;
+    font-size: 14px;
+    transition: all 0.15s ease;
+    border: 1px solid rgba(255, 255, 255, 0.2);
   }
 
   .hero-button:hover {
-    background: rgba(255, 255, 255, 0.3);
-    transform: translateY(-2px);
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+    background: rgba(255, 255, 255, 0.25);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
     color: white;
   }
 
   .hero-button.primary {
     background: white;
-    color: #667eea;
+    color: rgb(0, 100, 250);
+    border: 1px solid white;
   }
 
   .hero-button.primary:hover {
-    background: #f8f9fa;
-    color: #667eea;
+    background: rgba(255, 255, 255, 0.95);
+    color: rgb(0, 100, 250);
   }
 
   .features-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-    margin: 3rem 0;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px;
+    margin: 48px 0;
   }
 
   .feature-card {
     background: white;
-    padding: 2rem;
-    border-radius: 1rem;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease;
-    border: 1px solid #e2e8f0;
+    padding: 24px;
+    border-radius: 12px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04), 0 1px 4px rgba(0, 0, 0, 0.08);
+    transition: all 0.15s ease;
+    border: 1px solid rgba(230, 232, 234, 1);
   }
 
   .feature-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
   }
 
   .feature-icon {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
+    font-size: 32px;
+    margin-bottom: 16px;
     display: block;
+    color: rgb(0, 100, 250);
   }
 
   .feature-title {
-    font-size: 1.25rem;
+    font-size: 16px;
     font-weight: 600;
-    margin-bottom: 0.5rem;
-    color: #2d3748;
+    margin-bottom: 8px;
+    color: rgba(28, 31, 35, 1);
+    line-height: 22px;
   }
 
   .feature-description {
-    color: #4a5568;
-    line-height: 1.6;
+    color: rgba(107, 112, 117, 1);
+    font-size: 14px;
+    line-height: 20px;
   }
 
   .stats-section {
-    background: linear-gradient(135deg, #f7fafc 0%, #edf2f7 100%);
-    padding: 3rem 2rem;
-    margin: 3rem -2rem;
-    border-radius: 1rem;
+    background: rgba(249, 249, 249, 1);
+    padding: 48px 32px;
+    margin: 48px -32px;
+    border-radius: 12px;
     text-align: center;
+    border: 1px solid rgba(230, 232, 234, 1);
   }
 
   .stats-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 2rem;
-    max-width: 800px;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 32px;
+    max-width: 720px;
     margin: 0 auto;
   }
 
   .stat-item {
-    padding: 1rem;
+    padding: 16px;
+    text-align: center;
   }
 
   .stat-number {
-    font-size: 2.5rem;
-    font-weight: 700;
-    color: #667eea;
+    font-size: 32px;
+    font-weight: 600;
+    color: rgb(0, 100, 250);
     display: block;
+    line-height: 44px;
   }
 
   .stat-label {
-    color: #4a5568;
-    font-weight: 500;
-    margin-top: 0.5rem;
+    color: rgba(107, 112, 117, 1);
+    font-size: 14px;
+    font-weight: 400;
+    margin-top: 8px;
+    line-height: 20px;
   }
 
   .cta-section {

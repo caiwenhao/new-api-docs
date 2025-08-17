@@ -12,18 +12,19 @@
 </footer>
 
 <style>
-/* 极简页脚样式 */
+/* Semi Design 风格页脚 */
 .md-footer {
-  background: linear-gradient(90deg, #667eea, #764ba2);
-  color: white;
-  margin-top: 2rem;
+  background: rgba(249, 249, 249, 1);
+  border-top: 1px solid rgba(230, 232, 234, 1);
+  color: rgba(107, 112, 117, 1);
+  margin-top: 48px;
   border: none;
   box-shadow: none;
 }
 
 .md-footer-meta {
   background: transparent;
-  padding: 1.5rem 0;
+  padding: 24px 0;
   border: none;
 }
 
@@ -33,7 +34,7 @@
   align-items: center;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 1rem;
+  padding: 0 16px;
 }
 
 .md-footer-copyright {
@@ -43,11 +44,11 @@
 }
 
 .md-footer-copyright__highlight {
-  font-size: 0.9rem;
-  font-weight: 500;
-  color: rgba(255, 255, 255, 0.95);
-  letter-spacing: 0.5px;
-  line-height: 1.6;
+  font-size: 14px;
+  font-weight: 400;
+  color: rgba(107, 112, 117, 1);
+  line-height: 20px;
+  font-family: Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', PingFang SC, 'Hiragino Sans GB', 'Microsoft YaHei', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   margin: 0;
   padding: 0;
 }
@@ -55,22 +56,24 @@
 /* 响应式设计 */
 @media screen and (max-width: 768px) {
   .md-footer-meta {
-    padding: 1rem 0;
+    padding: 16px 0;
   }
 
   .md-footer-copyright__highlight {
-    font-size: 0.8rem;
-    line-height: 1.5;
+    font-size: 12px;
+    line-height: 16px;
   }
 }
 
 /* 深色模式适配 */
 [data-md-color-scheme="slate"] .md-footer {
-  background: linear-gradient(90deg, #4a5568, #2d3748);
+  background: rgba(45, 55, 72, 1);
+  border-top: 1px solid rgba(74, 85, 104, 1);
+  color: rgba(255, 255, 255, 0.6);
 }
 
 [data-md-color-scheme="slate"] .md-footer-copyright__highlight {
-  color: rgba(255, 255, 255, 0.9);
+  color: rgba(255, 255, 255, 0.6);
 }
 
 /* 移除默认的页脚样式 */

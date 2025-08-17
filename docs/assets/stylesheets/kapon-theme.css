@@ -1,267 +1,383 @@
-/* Kapon AI 极致简约主题样式 */
+/* Kapon AI - Semi Design 风格主题 */
 
-/* 全局变量定义 */
+/* 全局变量定义 - 基于 Semi Design 规范 */
 :root {
-  /* 主色调 - 渐变蓝紫色 */
-  --kapon-primary: #667eea;
-  --kapon-primary-dark: #764ba2;
-  --kapon-accent: #f093fb;
-  
-  /* 中性色 */
-  --kapon-text-primary: #2d3748;
-  --kapon-text-secondary: #4a5568;
-  --kapon-text-muted: #718096;
-  --kapon-bg-primary: #ffffff;
-  --kapon-bg-secondary: #f7fafc;
-  --kapon-border: #e2e8f0;
-  
-  /* 阴影 */
-  --kapon-shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.1);
-  --kapon-shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
-  --kapon-shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
-  
-  /* 圆角 */
-  --kapon-radius-sm: 4px;
-  --kapon-radius-md: 8px;
-  --kapon-radius-lg: 12px;
-  
-  /* 间距 */
-  --kapon-space-xs: 0.25rem;
-  --kapon-space-sm: 0.5rem;
-  --kapon-space-md: 1rem;
-  --kapon-space-lg: 1.5rem;
-  --kapon-space-xl: 2rem;
+  /* 主色调 - 基于 Semi Design 蓝色系 */
+  --kapon-primary: rgb(0, 100, 250);
+  --kapon-primary-hover: rgb(50, 149, 251);
+  --kapon-primary-active: rgb(0, 79, 179);
+  --kapon-primary-light: rgba(0, 100, 250, 0.1);
+
+  /* 中性色 - Semi Design 灰色系 */
+  --kapon-text-0: rgba(28, 31, 35, 1);
+  --kapon-text-1: rgba(46, 50, 56, 1);
+  --kapon-text-2: rgba(107, 112, 117, 1);
+  --kapon-text-3: rgba(167, 171, 176, 1);
+  --kapon-bg-0: rgba(255, 255, 255, 1);
+  --kapon-bg-1: rgba(249, 249, 249, 1);
+  --kapon-bg-2: rgba(230, 232, 234, 1);
+  --kapon-bg-3: rgba(198, 202, 205, 1);
+  --kapon-border: rgba(230, 232, 234, 1);
+  --kapon-fill-0: rgba(249, 249, 249, 1);
+  --kapon-fill-1: rgba(230, 232, 234, 1);
+
+  /* 阴影 - Semi Design 规范 */
+  --kapon-shadow-elevated: 0 0 1px rgba(0, 0, 0, 0.3), 0 4px 14px rgba(0, 0, 0, 0.1);
+  --kapon-shadow-overlay: 0 4px 16px rgba(0, 0, 0, 0.08);
+  --kapon-shadow-card: 0 1px 2px rgba(0, 0, 0, 0.04), 0 1px 4px rgba(0, 0, 0, 0.08);
+
+  /* 圆角 - Semi Design 规范 */
+  --kapon-radius-small: 3px;
+  --kapon-radius-medium: 6px;
+  --kapon-radius-large: 12px;
+  --kapon-radius-full: 9999px;
+
+  /* 间距 - Semi Design 4px 基准 */
+  --kapon-space-1: 4px;
+  --kapon-space-2: 8px;
+  --kapon-space-3: 12px;
+  --kapon-space-4: 16px;
+  --kapon-space-5: 20px;
+  --kapon-space-6: 24px;
+  --kapon-space-8: 32px;
+  --kapon-space-10: 40px;
+  --kapon-space-12: 48px;
+
+  /* 字体 - Semi Design 规范 */
+  --kapon-font-family: Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', PingFang SC, 'Hiragino Sans GB', 'Microsoft YaHei', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  --kapon-font-size-small: 12px;
+  --kapon-font-size-default: 14px;
+  --kapon-font-size-large: 16px;
+  --kapon-line-height-small: 16px;
+  --kapon-line-height-default: 20px;
+  --kapon-line-height-large: 22px;
 }
 
-/* 深色模式变量 */
+/* 深色模式变量 - Semi Design 深色主题 */
 [data-md-color-scheme="slate"] {
-  --kapon-text-primary: #f7fafc;
-  --kapon-text-secondary: #e2e8f0;
-  --kapon-text-muted: #a0aec0;
-  --kapon-bg-primary: #1a202c;
-  --kapon-bg-secondary: #2d3748;
-  --kapon-border: #4a5568;
+  --kapon-text-0: rgba(255, 255, 255, 0.9);
+  --kapon-text-1: rgba(255, 255, 255, 0.8);
+  --kapon-text-2: rgba(255, 255, 255, 0.6);
+  --kapon-text-3: rgba(255, 255, 255, 0.35);
+  --kapon-bg-0: rgba(26, 32, 44, 1);
+  --kapon-bg-1: rgba(45, 55, 72, 1);
+  --kapon-bg-2: rgba(74, 85, 104, 1);
+  --kapon-bg-3: rgba(113, 128, 150, 1);
+  --kapon-border: rgba(74, 85, 104, 1);
+  --kapon-fill-0: rgba(45, 55, 72, 1);
+  --kapon-fill-1: rgba(74, 85, 104, 1);
 }
 
-/* 主体布局优化 */
+/* 主体布局 - Semi Design 风格 */
 .md-main {
-  background: linear-gradient(135deg, var(--kapon-bg-primary) 0%, var(--kapon-bg-secondary) 100%);
+  background: var(--kapon-bg-0);
+  font-family: var(--kapon-font-family);
+  font-size: var(--kapon-font-size-default);
+  line-height: var(--kapon-line-height-default);
+  color: var(--kapon-text-0);
 }
 
-/* 导航栏样式优化 */
+/* 导航栏 - Semi Design 风格 */
 .md-header {
-  background: linear-gradient(90deg, var(--kapon-primary), var(--kapon-primary-dark));
-  box-shadow: var(--kapon-shadow-md);
-  backdrop-filter: blur(10px);
+  background: var(--kapon-bg-0);
+  border-bottom: 1px solid var(--kapon-border);
+  box-shadow: var(--kapon-shadow-card);
+  backdrop-filter: none;
+  height: 56px;
 }
 
 .md-header__title {
   font-weight: 600;
-  letter-spacing: 0.5px;
+  font-size: var(--kapon-font-size-large);
+  color: var(--kapon-text-0);
 }
 
-/* 侧边栏优化 */
+/* 侧边栏 - Semi Design 风格 */
 .md-sidebar {
-  background: var(--kapon-bg-primary);
+  background: var(--kapon-bg-0);
   border-right: 1px solid var(--kapon-border);
+  width: 240px;
 }
 
 .md-nav__title {
   font-weight: 600;
-  color: var(--kapon-text-primary);
-  border-bottom: 2px solid var(--kapon-primary);
-  padding-bottom: var(--kapon-space-sm);
-  margin-bottom: var(--kapon-space-md);
+  font-size: var(--kapon-font-size-default);
+  color: var(--kapon-text-0);
+  padding: var(--kapon-space-4) var(--kapon-space-4) var(--kapon-space-2);
+  margin: 0;
+  border-bottom: none;
 }
 
 .md-nav__link {
-  color: var(--kapon-text-secondary);
-  transition: all 0.2s ease;
-  border-radius: var(--kapon-radius-sm);
-  margin: var(--kapon-space-xs) 0;
+  color: var(--kapon-text-1);
+  font-size: var(--kapon-font-size-default);
+  padding: var(--kapon-space-2) var(--kapon-space-4);
+  margin: 0;
+  border-radius: var(--kapon-radius-medium);
+  transition: all 0.15s ease;
+  position: relative;
 }
 
 .md-nav__link:hover {
-  background: linear-gradient(90deg, var(--kapon-primary), var(--kapon-accent));
-  color: white;
-  transform: translateX(4px);
+  background: var(--kapon-fill-0);
+  color: var(--kapon-text-0);
+  transform: none;
 }
 
 .md-nav__link--active {
-  background: linear-gradient(90deg, var(--kapon-primary), var(--kapon-primary-dark));
-  color: white;
+  background: var(--kapon-primary-light);
+  color: var(--kapon-primary);
   font-weight: 500;
 }
 
-/* 内容区域优化 */
-.md-content {
-  background: var(--kapon-bg-primary);
-  border-radius: var(--kapon-radius-lg);
-  box-shadow: var(--kapon-shadow-sm);
-  margin: var(--kapon-space-md);
-  padding: var(--kapon-space-xl);
+.md-nav__link--active::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 3px;
+  height: 16px;
+  background: var(--kapon-primary);
+  border-radius: 0 var(--kapon-radius-small) var(--kapon-radius-small) 0;
 }
 
-/* 标题样式优化 */
+/* 内容区域 - Semi Design 风格 */
+.md-content {
+  background: var(--kapon-bg-0);
+  border-radius: var(--kapon-radius-large);
+  box-shadow: var(--kapon-shadow-card);
+  margin: var(--kapon-space-6);
+  padding: var(--kapon-space-8);
+  max-width: none;
+}
+
+.md-content__inner {
+  margin: 0;
+  padding: 0;
+}
+
+/* 标题样式 - Semi Design 风格 */
 .md-typeset h1 {
-  background: linear-gradient(90deg, var(--kapon-primary), var(--kapon-primary-dark));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  font-weight: 700;
-  margin-bottom: var(--kapon-space-lg);
+  color: var(--kapon-text-0);
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 36px;
+  margin: 0 0 var(--kapon-space-6) 0;
   position: relative;
 }
 
 .md-typeset h1::after {
   content: '';
   position: absolute;
-  bottom: -8px;
+  bottom: -var(--kapon-space-2);
   left: 0;
-  width: 60px;
+  width: 32px;
   height: 3px;
-  background: linear-gradient(90deg, var(--kapon-primary), var(--kapon-accent));
-  border-radius: var(--kapon-radius-sm);
+  background: var(--kapon-primary);
+  border-radius: var(--kapon-radius-small);
 }
 
 .md-typeset h2 {
-  color: var(--kapon-text-primary);
+  color: var(--kapon-text-0);
   font-weight: 600;
-  border-bottom: 2px solid var(--kapon-border);
-  padding-bottom: var(--kapon-space-sm);
-  margin-top: var(--kapon-space-xl);
-  margin-bottom: var(--kapon-space-lg);
+  font-size: 20px;
+  line-height: 28px;
+  margin: var(--kapon-space-8) 0 var(--kapon-space-4) 0;
+  padding-bottom: var(--kapon-space-2);
+  border-bottom: 1px solid var(--kapon-border);
 }
 
 .md-typeset h3 {
-  color: var(--kapon-primary);
+  color: var(--kapon-text-0);
   font-weight: 600;
-  margin-top: var(--kapon-space-lg);
-  margin-bottom: var(--kapon-space-md);
+  font-size: var(--kapon-font-size-large);
+  line-height: var(--kapon-line-height-large);
+  margin: var(--kapon-space-6) 0 var(--kapon-space-3) 0;
 }
 
-/* 代码块优化 */
+.md-typeset h4 {
+  color: var(--kapon-text-1);
+  font-weight: 600;
+  font-size: var(--kapon-font-size-default);
+  line-height: var(--kapon-line-height-default);
+  margin: var(--kapon-space-5) 0 var(--kapon-space-2) 0;
+}
+
+/* 代码块 - Semi Design 风格 */
 .md-typeset pre {
-  background: var(--kapon-bg-secondary);
+  background: var(--kapon-fill-0);
   border: 1px solid var(--kapon-border);
-  border-radius: var(--kapon-radius-md);
-  box-shadow: var(--kapon-shadow-sm);
-  position: relative;
-  overflow: hidden;
+  border-radius: var(--kapon-radius-medium);
+  box-shadow: none;
+  padding: var(--kapon-space-4);
+  margin: var(--kapon-space-4) 0;
+  overflow: auto;
 }
 
-.md-typeset pre::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 3px;
-  background: linear-gradient(90deg, var(--kapon-primary), var(--kapon-accent));
+.md-typeset pre code {
+  background: transparent;
+  color: var(--kapon-text-0);
+  padding: 0;
+  font-family: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace;
+  font-size: 13px;
+  line-height: 18px;
 }
 
 .md-typeset code {
-  background: var(--kapon-bg-secondary);
+  background: var(--kapon-fill-0);
   color: var(--kapon-primary);
-  padding: var(--kapon-space-xs) var(--kapon-space-sm);
-  border-radius: var(--kapon-radius-sm);
-  font-weight: 500;
+  padding: 2px var(--kapon-space-1);
+  border-radius: var(--kapon-radius-small);
+  font-family: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace;
+  font-size: 13px;
+  font-weight: 400;
 }
 
-/* 表格优化 */
+/* 表格 - Semi Design 风格 */
 .md-typeset table {
-  border-radius: var(--kapon-radius-md);
+  border-radius: var(--kapon-radius-medium);
   overflow: hidden;
-  box-shadow: var(--kapon-shadow-sm);
+  box-shadow: var(--kapon-shadow-card);
   border: 1px solid var(--kapon-border);
+  margin: var(--kapon-space-4) 0;
+  width: 100%;
 }
 
 .md-typeset table th {
-  background: linear-gradient(90deg, var(--kapon-primary), var(--kapon-primary-dark));
-  color: white;
+  background: var(--kapon-fill-0);
+  color: var(--kapon-text-0);
   font-weight: 600;
-  text-align: center;
+  font-size: var(--kapon-font-size-default);
+  padding: var(--kapon-space-3) var(--kapon-space-4);
+  text-align: left;
+  border-bottom: 1px solid var(--kapon-border);
 }
 
 .md-typeset table td {
+  color: var(--kapon-text-1);
+  font-size: var(--kapon-font-size-default);
+  padding: var(--kapon-space-3) var(--kapon-space-4);
   border-bottom: 1px solid var(--kapon-border);
-  padding: var(--kapon-space-md);
 }
 
 .md-typeset table tr:hover {
-  background: var(--kapon-bg-secondary);
+  background: var(--kapon-fill-0);
 }
 
-/* 按钮和链接优化 */
+.md-typeset table tr:last-child td {
+  border-bottom: none;
+}
+
+/* 按钮和链接 - Semi Design 风格 */
 .md-typeset a {
   color: var(--kapon-primary);
   text-decoration: none;
-  border-bottom: 1px solid transparent;
-  transition: all 0.2s ease;
+  transition: color 0.15s ease;
+  border-bottom: none;
 }
 
 .md-typeset a:hover {
-  border-bottom-color: var(--kapon-primary);
-  color: var(--kapon-primary-dark);
+  color: var(--kapon-primary-hover);
 }
 
-/* 警告框优化 */
-.md-typeset .admonition {
-  border-radius: var(--kapon-radius-md);
-  box-shadow: var(--kapon-shadow-sm);
+.md-typeset a:active {
+  color: var(--kapon-primary-active);
+}
+
+/* 按钮样式 */
+.md-button {
+  background: var(--kapon-primary);
+  color: white;
   border: none;
+  border-radius: var(--kapon-radius-medium);
+  padding: var(--kapon-space-2) var(--kapon-space-4);
+  font-size: var(--kapon-font-size-default);
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+
+.md-button:hover {
+  background: var(--kapon-primary-hover);
+  color: white;
+  transform: translateY(-1px);
+  box-shadow: var(--kapon-shadow-overlay);
+}
+
+.md-button:active {
+  background: var(--kapon-primary-active);
+  transform: translateY(0);
+}
+
+.md-button--outline {
+  background: transparent;
+  color: var(--kapon-primary);
+  border: 1px solid var(--kapon-primary);
+}
+
+.md-button--outline:hover {
+  background: var(--kapon-primary-light);
+  color: var(--kapon-primary);
+}
+
+/* 警告框 - Semi Design 风格 */
+.md-typeset .admonition {
+  border-radius: var(--kapon-radius-medium);
+  box-shadow: var(--kapon-shadow-card);
+  border: 1px solid var(--kapon-border);
+  margin: var(--kapon-space-4) 0;
   overflow: hidden;
+  background: var(--kapon-bg-0);
 }
 
 .md-typeset .admonition-title {
   font-weight: 600;
+  font-size: var(--kapon-font-size-default);
   margin: 0;
-  padding: var(--kapon-space-md);
+  padding: var(--kapon-space-3) var(--kapon-space-4);
+  background: var(--kapon-fill-0);
+  border-bottom: 1px solid var(--kapon-border);
+}
+
+.md-typeset .admonition-content {
+  padding: var(--kapon-space-4);
 }
 
 .md-typeset .admonition.note {
-  border-left: 4px solid var(--kapon-primary);
+  border-left: 3px solid var(--kapon-primary);
+}
+
+.md-typeset .admonition.note .admonition-title {
+  color: var(--kapon-primary);
 }
 
 .md-typeset .admonition.tip {
-  border-left: 4px solid #48bb78;
+  border-left: 3px solid #52c41a;
+}
+
+.md-typeset .admonition.tip .admonition-title {
+  color: #52c41a;
 }
 
 .md-typeset .admonition.warning {
-  border-left: 4px solid #ed8936;
+  border-left: 3px solid #faad14;
+}
+
+.md-typeset .admonition.warning .admonition-title {
+  color: #faad14;
 }
 
 .md-typeset .admonition.danger {
-  border-left: 4px solid #f56565;
+  border-left: 3px solid #ff4d4f;
 }
 
-/* 页脚优化 - 极简版本 */
-.md-footer {
-  background: linear-gradient(90deg, var(--kapon-primary), var(--kapon-primary-dark));
-  color: white;
-  margin-top: 2rem;
-  border: none;
-  box-shadow: none;
-}
-
-.md-footer-meta {
-  background: transparent;
-  padding: 1.5rem 0;
-  border: none;
-}
-
-.md-footer-copyright {
-  text-align: center;
-  width: 100%;
-  margin: 0;
-}
-
-.md-footer-copyright__highlight {
-  font-size: 0.9rem;
-  font-weight: 500;
-  color: rgba(255, 255, 255, 0.95);
-  letter-spacing: 0.5px;
-  line-height: 1.6;
+.md-typeset .admonition.danger .admonition-title {
+  color: #ff4d4f;
 }
 
 /* 隐藏默认的页脚导航和社交链接 */
@@ -270,16 +386,25 @@
   display: none;
 }
 
-/* 搜索框优化 */
+/* 搜索框 - Semi Design 风格 */
 .md-search__input {
-  border-radius: var(--kapon-radius-lg);
-  border: 2px solid var(--kapon-border);
-  transition: all 0.2s ease;
+  background: var(--kapon-bg-0);
+  border: 1px solid var(--kapon-border);
+  border-radius: var(--kapon-radius-medium);
+  color: var(--kapon-text-0);
+  font-size: var(--kapon-font-size-default);
+  padding: var(--kapon-space-2) var(--kapon-space-3);
+  transition: all 0.15s ease;
 }
 
 .md-search__input:focus {
   border-color: var(--kapon-primary);
-  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+  box-shadow: 0 0 0 2px var(--kapon-primary-light);
+  outline: none;
+}
+
+.md-search__input::placeholder {
+  color: var(--kapon-text-3);
 }
 
 /* 响应式优化 */
@@ -310,20 +435,22 @@
   animation: fadeInUp 0.5s ease-out;
 }
 
-/* 滚动条优化 */
+/* 滚动条 - Semi Design 风格 */
 ::-webkit-scrollbar {
-  width: 8px;
+  width: 6px;
+  height: 6px;
 }
 
 ::-webkit-scrollbar-track {
-  background: var(--kapon-bg-secondary);
+  background: transparent;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(180deg, var(--kapon-primary), var(--kapon-primary-dark));
-  border-radius: var(--kapon-radius-sm);
+  background: var(--kapon-fill-1);
+  border-radius: var(--kapon-radius-medium);
+  transition: background 0.15s ease;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(180deg, var(--kapon-primary-dark), var(--kapon-primary));
+  background: var(--kapon-text-3);
 }
