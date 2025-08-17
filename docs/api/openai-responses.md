@@ -14,9 +14,9 @@ OpenAI 最先进的模型响应接口。支持文本和图像输入，以及文�
 ### 基础文本响应 ✅
 
 ```bash
-curl https://你的newapi服务器地址/v1/responses \
+curl https://models.kapon.cloud/v1/responses \
   -H "Content-Type: application/json" \
-  -H "Authorization: Bearer $NEWAPI_API_KEY" \
+  -H "Authorization: Bearer $KAPON_API_KEY" \
   -d '{
     "model": "gpt-4.1",
     "input": "讲一个三句话的关于独角兽的睡前故事。"
@@ -87,9 +87,9 @@ curl https://你的newapi服务器地址/v1/responses \
 ### 图像分析响应 ✅
 
 ```bash
-curl https://你的newapi服务器地址/v1/responses \
+curl https://models.kapon.cloud/v1/responses \
   -H "Content-Type: application/json" \
-  -H "Authorization: Bearer $NEWAPI_API_KEY" \
+  -H "Authorization: Bearer $KAPON_API_KEY" \
   -d '{
     "model": "gpt-4.1",
     "input": [
@@ -171,9 +171,9 @@ curl https://你的newapi服务器地址/v1/responses \
 ### 网络搜索工具 ✅
 
 ```bash
-curl https://你的newapi服务器地址/v1/responses \
+curl https://models.kapon.cloud/v1/responses \
   -H "Content-Type: application/json" \
-  -H "Authorization: Bearer $NEWAPI_API_KEY" \
+  -H "Authorization: Bearer $KAPON_API_KEY" \
   -d '{
     "model": "gpt-4.1",
     "tools": [{ "type": "web_search_preview" }],
@@ -285,9 +285,9 @@ curl https://你的newapi服务器地址/v1/responses \
 ### 文件搜索工具 ✅
 
 ```bash
-curl https://你的newapi服务器地址/v1/responses \
+curl https://models.kapon.cloud/v1/responses \
   -H "Content-Type: application/json" \
-  -H "Authorization: Bearer $NEWAPI_API_KEY" \
+  -H "Authorization: Bearer $KAPON_API_KEY" \
   -d '{
     "model": "gpt-4.1",
     "tools": [{
@@ -434,9 +434,9 @@ curl https://你的newapi服务器地址/v1/responses \
 ### 流式响应 ✅
 
 ```bash
-curl https://你的newapi服务器地址/v1/responses \
+curl https://models.kapon.cloud/v1/responses \
   -H "Content-Type: application/json" \
-  -H "Authorization: Bearer $NEWAPI_API_KEY" \
+  -H "Authorization: Bearer $KAPON_API_KEY" \
   -d '{
     "model": "gpt-4.1",
     "instructions": "你是一个有帮助的助手。",
@@ -509,9 +509,9 @@ data: {"type":"response.completed","response":{"id":"resp_67c9fdcecf488190bdd9a0
 ### 函数调用 ✅
 
 ```bash
-curl https://你的newapi服务器地址/v1/responses \
+curl https://models.kapon.cloud/v1/responses \
   -H "Content-Type: application/json" \
-  -H "Authorization: Bearer $NEWAPI_API_KEY" \
+  -H "Authorization: Bearer $KAPON_API_KEY" \
   -d '{
     "model": "gpt-4.1",
     "input": "波士顿今天的天气如何？",
@@ -623,9 +623,9 @@ curl https://你的newapi服务器地址/v1/responses \
 ### 推理能力 ✅
 
 ```bash
-curl https://你的newapi服务器地址/v1/responses \
+curl https://models.kapon.cloud/v1/responses \
   -H "Content-Type: application/json" \
-  -H "Authorization: Bearer $NEWAPI_API_KEY" \
+  -H "Authorization: Bearer $KAPON_API_KEY" \
   -d '{
     "model": "o3-mini",
     "input": "一只啄木鸟能啄多少木头?",
@@ -711,10 +711,10 @@ POST /v1/responses
 在请求头中包含以下内容进行 API 密钥认证：
 
 ```
-Authorization: Bearer $NEWAPI_API_KEY
+Authorization: Bearer $KAPON_API_KEY
 ```
 
-其中 `$NEWAPI_API_KEY` 是您的 API 密钥。
+其中 `$KAPON_API_KEY` 是您的 API 密钥。
 
 ### 请求体参数
 

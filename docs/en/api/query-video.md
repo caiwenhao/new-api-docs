@@ -17,7 +17,7 @@ GET /v1/video/generations/{task_id}
 ## Request Example
 
 ```bash
-curl 'https://your-newapi-server-address/v1/video/generations/{task_id}'
+curl 'https://models.kapon.cloud/v1/video/generations/{task_id}'
 ```
 
 ## Response Format

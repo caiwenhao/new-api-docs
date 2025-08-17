@@ -14,7 +14,7 @@ Deepseek-reasoner is a reasoning model launched by DeepSeek. Before outputting t
 ```bash
 curl https://api.deepseek.com/v1/chat/completions \
   -H "Content-Type: application/json" \
-  -H "Authorization: Bearer $NEWAPI_API_KEY" \
+  -H "Authorization: Bearer $KAPON_API_KEY" \
   -d '{
     "model": "deepseek-reasoner",
     "messages": [
@@ -57,7 +57,7 @@ curl https://api.deepseek.com/v1/chat/completions \
 ```bash
 curl https://api.deepseek.com/v1/chat/completions \
   -H "Content-Type: application/json" \
-  -H "Authorization: Bearer $NEWAPI_API_KEY" \
+  -H "Authorization: Bearer $KAPON_API_KEY" \
   -d '{
     "model": "deepseek-reasoner",
     "messages": [
@@ -103,7 +103,7 @@ POST /v1/chat/completions
 Include the following in the request header for API key authentication:
 
 ```
-Authorization: Bearer $NEWAPI_API_KEY
+Authorization: Bearer $KAPON_API_KEY
 ```
 
 Where `$DEEPSEEK_API_KEY` is your API key.

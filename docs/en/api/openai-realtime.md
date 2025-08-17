@@ -41,7 +41,7 @@ OpenAI Realtime API provides two connection methods:
 - Generation: Created via server-side API
 
 ```http
-POST https://your-newapi-server-address/v1/realtime/sessions
+POST https://models.kapon.cloud/v1/realtime/sessions
 Content-Type: application/json
 Authorization: Bearer $NEW_API_KEY
 
@@ -60,7 +60,7 @@ Authorization: Bearer $NEW_API_KEY
 ## 🔌 Connection Establishment
 
 ### WebRTC Connection
-- URL: `https://your-newapi-server-address/v1/realtime`
+- URL: `https://models.kapon.cloud/v1/realtime`
 - Query parameters: `model`
 - Headers: 
   - `Authorization: Bearer EPHEMERAL_KEY`
@@ -195,7 +195,7 @@ async function init() {
   const offer = await pc.createOffer();
   await pc.setLocalDescription(offer);
 
-  const baseUrl = "https://your-newapi-server-address/v1/realtime";
+  const baseUrl = "https://models.kapon.cloud/v1/realtime";
   const model = "gpt-4o-realtime-preview-2024-12-17";
   const sdpResponse = await fetch(`${baseUrl}?model=${model}`, {
     method: "POST",
@@ -225,7 +225,7 @@ const app = express();
 // Create an endpoint for generating ephemeral tokens
 // This endpoint works with the client code above
 app.get("/session", async (req, res) => {
-  const r = await fetch("https://your-newapi-server-address/v1/realtime/sessions", {
+  const r = await fetch("https://models.kapon.cloud/v1/realtime/sessions", {
     method: "POST",
     headers: {
       "Authorization": `Bearer ${process.env.NEW_API_KEY}`,

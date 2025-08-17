@@ -14,7 +14,7 @@ Deepseek-reasoner 是 DeepSeek 推出的推理模型。在输出最终回答之�
 ```bash
 curl https://api.deepseek.com/v1/chat/completions \
   -H "Content-Type: application/json" \
-  -H "Authorization: Bearer $NEWAPI_API_KEY" \
+  -H "Authorization: Bearer $KAPON_API_KEY" \
   -d '{
     "model": "deepseek-reasoner",
     "messages": [
@@ -57,7 +57,7 @@ curl https://api.deepseek.com/v1/chat/completions \
 ```bash
 curl https://api.deepseek.com/v1/chat/completions \
   -H "Content-Type: application/json" \
-  -H "Authorization: Bearer $NEWAPI_API_KEY" \
+  -H "Authorization: Bearer $KAPON_API_KEY" \
   -d '{
     "model": "deepseek-reasoner",
     "messages": [
@@ -103,7 +103,7 @@ POST /v1/chat/completions
 在请求头中包含以下内容进行 API 密钥认证：
 
 ```
-Authorization: Bearer $NEWAPI_API_KEY
+Authorization: Bearer $KAPON_API_KEY
 ```
 
 其中 `$DEEPSEEK_API_KEY` 是您的 API 密钥。

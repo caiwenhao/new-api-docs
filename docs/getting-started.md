@@ -270,7 +270,7 @@ hide:
     
     ---
     
-    使用Docker镜像快速部署New API，适合个人使用或小规模应用场景
+    使用Docker镜像快速部署Kapon AI服务，适合个人使用或小规模应用场景
     
     [了解更多 →](installation/docker-installation.md){ .more-link }
 
@@ -377,7 +377,7 @@ hide:
     
     ---
     
-    探索基于New API开发的各类AI应用示例
+    探索基于Kapon AI开发的各类AI应用示例和最佳实践
     
     [了解更多 →](apps/cherry-studio.md){ .more-link }
 

@@ -40,7 +40,7 @@ POST /v1/video/generations
 ### Kling AI Example
 
 ```bash
-curl https://your-newapi-server-address/v1/video/generations \
+curl https://models.kapon.cloud/v1/video/generations \
   --request POST \
   --header 'Authorization: ' \
   --header 'Content-Type: application/json' \
@@ -61,7 +61,7 @@ curl https://your-newapi-server-address/v1/video/generations \
 ### Jimeng AI Example
 
 ```bash
-curl https://your-newapi-server-address/v1/video/generations \
+curl https://models.kapon.cloud/v1/video/generations \
   --request POST \
   --header 'Authorization: ' \
   --header 'Content-Type: application/json' \
@@ -82,7 +82,7 @@ curl https://your-newapi-server-address/v1/video/generations \
 ### Vidu Channel Example
 
 ```bash
-curl https://your-newapi-server-address/v1/video/generations \
+curl https://models.kapon.cloud/v1/video/generations \
   --request POST \
   --header 'Authorization: ' \
   --header 'Content-Type: application/json' \

@@ -16,8 +16,8 @@ OpenAI Audio API provides three main functions:
 ### Text-to-Speech ✅
 
 ```bash
-curl https://your-newapi-server-address/v1/audio/speech \
-  -H "Authorization: Bearer $NEWAPI_API_KEY" \
+curl https://models.kapon.cloud/v1/audio/speech \
+  -H "Authorization: Bearer $KAPON_API_KEY" \
   -H "Content-Type: application/json" \
   -d '{
     "model": "tts-1",
@@ -30,8 +30,8 @@ curl https://your-newapi-server-address/v1/audio/speech \
 ### Speech-to-Text ✅
 
 ```bash
-curl https://your-newapi-server-address/v1/audio/transcriptions \
-  -H "Authorization: Bearer $NEWAPI_API_KEY" \
+curl https://models.kapon.cloud/v1/audio/transcriptions \
+  -H "Authorization: Bearer $KAPON_API_KEY" \
   -H "Content-Type: multipart/form-data" \
   -F file="@/path/to/file/audio.mp3" \
   -F model="whisper-1"
@@ -48,8 +48,8 @@ curl https://your-newapi-server-address/v1/audio/transcriptions \
 ### Audio Translation ✅
 
 ```bash
-curl https://your-newapi-server-address/v1/audio/translations \
-  -H "Authorization: Bearer $NEWAPI_API_KEY" \
+curl https://models.kapon.cloud/v1/audio/translations \
+  -H "Authorization: Bearer $KAPON_API_KEY" \
   -H "Content-Type: multipart/form-data" \
   -F file="@/path/to/file/chinese.mp3" \
   -F model="whisper-1"
@@ -93,10 +93,10 @@ Translate audio to English text.
 Include the following in the request header for API key authentication:
 
 ```
-Authorization: Bearer $NEWAPI_API_KEY
+Authorization: Bearer $KAPON_API_KEY
 ```
 
-Where `$NEWAPI_API_KEY` is your API key.
+Where `$KAPON_API_KEY` is your API key.
 
 ### Request Body Parameters
 

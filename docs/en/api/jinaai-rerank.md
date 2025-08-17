@@ -15,9 +15,9 @@ Jina AI Rerank is a powerful text reranking model that can sort document lists b
 ### Basic Rerank Request ✅
 
 ```bash
-curl https://your-newapi-server-address/v1/rerank \
+curl https://models.kapon.cloud/v1/rerank \
   -H "Content-Type: application/json" \
-  -H "Authorization: Bearer $NEWAPI_API_KEY" \
+  -H "Authorization: Bearer $KAPON_API_KEY" \
   -d '{
     "model": "jina-reranker-v2-base-multilingual",
     "query": "Organic skincare products for sensitive skin",
@@ -71,10 +71,10 @@ POST /v1/rerank
 Include the following in the request header for API key authentication:
 
 ```
-Authorization: Bearer $NEWAPI_API_KEY
+Authorization: Bearer $KAPON_API_KEY
 ```
 
-Where `$NEWAPI_API_KEY` is your API key.
+Where `$KAPON_API_KEY` is your API key.
 
 ### Request Body Parameters
 

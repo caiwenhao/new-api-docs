@@ -15,8 +15,8 @@
 ### 基础重排序请求 ✅
 
 ```bash
-curl https://你的newapi服务器地址/v1/rerank \
-  -H "Authorization: Bearer $NEWAPI_API_KEY" \
+curl https://models.kapon.cloud/v1/rerank \
+  -H "Authorization: Bearer $KAPON_API_KEY" \
   -H "Content-Type: application/json" \
   -d '{
     "model": "rerank-v3.5",
@@ -66,8 +66,8 @@ curl https://你的newapi服务器地址/v1/rerank \
 ### 使用结构化数据 ✅
 
 ```bash
-curl https://你的newapi服务器地址/v1/rerank \
-  -H "Authorization: Bearer $NEWAPI_API_KEY" \
+curl https://models.kapon.cloud/v1/rerank \
+  -H "Authorization: Bearer $KAPON_API_KEY" \
   -H "Content-Type: application/json" \
   -d '{
     "model": "rerank-v3.5",
@@ -126,10 +126,10 @@ POST /v1/rerank
 在请求头中包含以下内容进行 API 密钥认证：
 
 ```
-Authorization: Bearer $NEWAPI_API_KEY
+Authorization: Bearer $KAPON_API_KEY
 ```
 
-其中 `$NEWAPI_API_KEY` 是您的 API 密钥。
+其中 `$KAPON_API_KEY` 是您的 API 密钥。
 
 ### 请求头参数
 

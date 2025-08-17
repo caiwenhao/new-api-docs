@@ -12,9 +12,9 @@ Given a list of messages comprising a conversation, the model will return a resp
 ### Basic Text Chat ✅
 
 ```bash
-curl https://your-newapi-server-address/v1/chat/completions \
+curl https://models.kapon.cloud/v1/chat/completions \
   -H "Content-Type: application/json" \
-  -H "Authorization: Bearer $NEWAPI_API_KEY" \
+  -H "Authorization: Bearer $KAPON_API_KEY" \
   -d '{
     "model": "gpt-4.1",
     "messages": [
@@ -73,9 +73,9 @@ curl https://your-newapi-server-address/v1/chat/completions \
 ### Image Analysis Chat ✅
 
 ```bash
-curl https://your-newapi-server-address/v1/chat/completions \
+curl https://models.kapon.cloud/v1/chat/completions \
   -H "Content-Type: application/json" \
-  -H "Authorization: Bearer $NEWAPI_API_KEY" \
+  -H "Authorization: Bearer $KAPON_API_KEY" \
   -d '{
     "model": "gpt-4.1",
     "messages": [
@@ -143,9 +143,9 @@ curl https://your-newapi-server-address/v1/chat/completions \
 ### Streaming Response ✅
 
 ```bash
-curl https://your-newapi-server-address/v1/chat/completions \
+curl https://models.kapon.cloud/v1/chat/completions \
   -H "Content-Type: application/json" \
-  -H "Authorization: Bearer $NEWAPI_API_KEY" \
+  -H "Authorization: Bearer $KAPON_API_KEY" \
   -d '{
     "model": "gpt-4.1",
     "messages": [
@@ -177,9 +177,9 @@ curl https://your-newapi-server-address/v1/chat/completions \
 ### Function Calling ✅
 
 ```bash
-curl https://your-newapi-server-address/v1/chat/completions \
+curl https://models.kapon.cloud/v1/chat/completions \
   -H "Content-Type: application/json" \
-  -H "Authorization: Bearer $NEWAPI_API_KEY" \
+  -H "Authorization: Bearer $KAPON_API_KEY" \
   -d '{
     "model": "gpt-4.1",
     "messages": [
@@ -260,9 +260,9 @@ curl https://your-newapi-server-address/v1/chat/completions \
 ### Logprobs Request ✅
 
 ```bash
-curl https://your-newapi-server-address/v1/chat/completions \
+curl https://models.kapon.cloud/v1/chat/completions \
   -H "Content-Type: application/json" \
-  -H "Authorization: Bearer $NEWAPI_API_KEY" \
+  -H "Authorization: Bearer $KAPON_API_KEY" \
   -d '{
     "model": "gpt-4.1",
     "messages": [
@@ -485,10 +485,10 @@ Create a model response for a given chat conversation. For more details, please 
 Include the following in the request headers for API key authentication:
 
 ```
-Authorization: Bearer $NEWAPI_API_KEY
+Authorization: Bearer $KAPON_API_KEY
 ```
 
-Where `$NEWAPI_API_KEY` is your API key. You can find or generate your API key on the API keys page of the OpenAI platform.
+Where `$KAPON_API_KEY` is your API key. You can find or generate your API key on the API keys page of the OpenAI platform.
 
 ### Request Body Parameters
 

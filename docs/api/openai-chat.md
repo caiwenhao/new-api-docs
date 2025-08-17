@@ -12,9 +12,9 @@
 ### 基础文本对话 ✅
 
 ```bash
-curl https://你的newapi服务器地址/v1/chat/completions \
+curl https://models.kapon.cloud/v1/chat/completions \
   -H "Content-Type: application/json" \
-  -H "Authorization: Bearer $NEWAPI_API_KEY" \
+  -H "Authorization: Bearer $KAPON_API_KEY" \
   -d '{
     "model": "gpt-4.1",
     "messages": [
@@ -73,9 +73,9 @@ curl https://你的newapi服务器地址/v1/chat/completions \
 ### 图像分析对话 ✅
 
 ```bash
-curl https://你的newapi服务器地址/v1/chat/completions \
+curl https://models.kapon.cloud/v1/chat/completions \
   -H "Content-Type: application/json" \
-  -H "Authorization: Bearer $NEWAPI_API_KEY" \
+  -H "Authorization: Bearer $KAPON_API_KEY" \
   -d '{
     "model": "gpt-4.1",
     "messages": [
@@ -143,9 +143,9 @@ curl https://你的newapi服务器地址/v1/chat/completions \
 ### 流式响应 ✅
 
 ```bash
-curl https://你的newapi服务器地址/v1/chat/completions \
+curl https://models.kapon.cloud/v1/chat/completions \
   -H "Content-Type: application/json" \
-  -H "Authorization: Bearer $NEWAPI_API_KEY" \
+  -H "Authorization: Bearer $KAPON_API_KEY" \
   -d '{
     "model": "gpt-4.1",
     "messages": [
@@ -177,9 +177,9 @@ curl https://你的newapi服务器地址/v1/chat/completions \
 ### 函数调用 ✅
 
 ```bash
-curl https://你的newapi服务器地址/v1/chat/completions \
+curl https://models.kapon.cloud/v1/chat/completions \
   -H "Content-Type: application/json" \
-  -H "Authorization: Bearer $NEWAPI_API_KEY" \
+  -H "Authorization: Bearer $KAPON_API_KEY" \
   -d '{
     "model": "gpt-4.1",
     "messages": [
@@ -260,9 +260,9 @@ curl https://你的newapi服务器地址/v1/chat/completions \
 ### Logprobs 请求 ✅
 
 ```bash
-curl https://你的newapi服务器地址/v1/chat/completions \
+curl https://models.kapon.cloud/v1/chat/completions \
   -H "Content-Type: application/json" \
-  -H "Authorization: Bearer $NEWAPI_API_KEY" \
+  -H "Authorization: Bearer $KAPON_API_KEY" \
   -d '{
     "model": "gpt-4.1",
     "messages": [
@@ -485,10 +485,10 @@ POST /v1/chat/completions
 在请求头中包含以下内容进行 API 密钥认证：
 
 ```
-Authorization: Bearer $NEWAPI_API_KEY
+Authorization: Bearer $KAPON_API_KEY
 ```
 
-其中 `$NEWAPI_API_KEY` 是您的 API 密钥。您可以在 OpenAI 平台的 API 密钥页面中找到或生成 API 密钥。
+其中 `$KAPON_API_KEY` 是您的 API 密钥。您可以在 OpenAI 平台的 API 密钥页面中找到或生成 API 密钥。
 
 ### 请求体参数
 

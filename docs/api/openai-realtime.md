@@ -41,7 +41,7 @@ OpenAI Realtime API 提供两种连接方式：
 - 获取方式: 通过服务器端 API 创建
 
 ```http
-POST https://你的newapi服务器地址/v1/realtime/sessions
+POST https://models.kapon.cloud/v1/realtime/sessions
 Content-Type: application/json
 Authorization: Bearer $NEW_API_KEY
 
@@ -60,7 +60,7 @@ Authorization: Bearer $NEW_API_KEY
 ## 🔌 连接建立
 
 ### WebRTC 连接
-- URL: `https://你的newapi服务器地址/v1/realtime`
+- URL: `https://models.kapon.cloud/v1/realtime`
 - 查询参数: `model`
 - 请求头: 
   - `Authorization: Bearer EPHEMERAL_KEY`
@@ -195,7 +195,7 @@ async function init() {
   const offer = await pc.createOffer();
   await pc.setLocalDescription(offer);
 
-  const baseUrl = "https://你的newapi服务器地址/v1/realtime";
+  const baseUrl = "https://models.kapon.cloud/v1/realtime";
   const model = "gpt-4o-realtime-preview-2024-12-17";
   const sdpResponse = await fetch(`${baseUrl}?model=${model}`, {
     method: "POST",
@@ -225,7 +225,7 @@ const app = express();
 // 创建一个端点用于生成临时令牌
 // 该端点与上面的客户端代码配合使用
 app.get("/session", async (req, res) => {
-  const r = await fetch("https://你的newapi服务器地址/v1/realtime/sessions", {
+  const r = await fetch("https://models.kapon.cloud/v1/realtime/sessions", {
     method: "POST",
     headers: {
       "Authorization": `Bearer ${process.env.NEW_API_KEY}`,

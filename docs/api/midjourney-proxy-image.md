@@ -130,8 +130,8 @@ graph TD
 ### 提交Imagine任务 ✅
 
 ```bash
-curl --location --request POST 'https://你的newapi服务器地址/mj/submit/imagine' \
---header 'Authorization: Bearer $NEWAPI_API_KEY' \
+curl --location --request POST 'https://models.kapon.cloud/mj/submit/imagine' \
+--header 'Authorization: Bearer $KAPON_API_KEY' \
 --header 'Accept: application/json' \
 --header 'Content-Type: application/json' \
 --data-raw '{
@@ -165,8 +165,8 @@ curl --location --request POST 'https://你的newapi服务器地址/mj/submit/im
 ### 提交Blend任务 ✅
 
 ```bash
-curl --location --request POST 'https://你的newapi服务器地址/mj/submit/blend' \
---header 'Authorization: Bearer $NEWAPI_API_KEY' \
+curl --location --request POST 'https://models.kapon.cloud/mj/submit/blend' \
+--header 'Authorization: Bearer $KAPON_API_KEY' \
 --header 'Accept: application/json' \
 --header 'Content-Type: application/json' \
 --data-raw '{
@@ -203,8 +203,8 @@ curl --location --request POST 'https://你的newapi服务器地址/mj/submit/bl
 ### 提交Describe任务 ✅
 
 ```bash
-curl --location --request POST 'https://你的newapi服务器地址/mj/submit/describe' \
---header 'Authorization: Bearer $NEWAPI_API_KEY' \
+curl --location --request POST 'https://models.kapon.cloud/mj/submit/describe' \
+--header 'Authorization: Bearer $KAPON_API_KEY' \
 --header 'Accept: application/json' \
 --header 'Content-Type: application/json' \
 --data-raw '{
@@ -237,8 +237,8 @@ curl --location --request POST 'https://你的newapi服务器地址/mj/submit/de
 ### 提交Modal ✅
 
 ```bash
-curl --location --request POST 'https://你的newapi服务器地址/mj/submit/modal' \
---header 'Authorization: Bearer $NEWAPI_API_KEY' \
+curl --location --request POST 'https://models.kapon.cloud/mj/submit/modal' \
+--header 'Authorization: Bearer $KAPON_API_KEY' \
 --header 'Accept: application/json' \
 --header 'Content-Type: application/json' \
 --data-raw '{
@@ -262,8 +262,8 @@ curl --location --request POST 'https://你的newapi服务器地址/mj/submit/mo
 ### 提交swap_face任务 ✅
 
 ```bash
-curl --location --request POST 'https://你的newapi服务器地址/mj/insight-face/swap' \
---header 'Authorization: Bearer $NEWAPI_API_KEY' \
+curl --location --request POST 'https://models.kapon.cloud/mj/insight-face/swap' \
+--header 'Authorization: Bearer $KAPON_API_KEY' \
 --header 'Accept: application/json' \
 --header 'Content-Type: application/json' \
 --data-raw '{
@@ -285,8 +285,8 @@ curl --location --request POST 'https://你的newapi服务器地址/mj/insight-f
 ### 执行Action动作 ✅
 
 ```bash
-curl --location --request POST 'https://你的newapi服务器地址/mj/submit/action' \
---header 'Authorization: Bearer $NEWAPI_API_KEY' \
+curl --location --request POST 'https://models.kapon.cloud/mj/submit/action' \
+--header 'Authorization: Bearer $KAPON_API_KEY' \
 --header 'Accept: application/json' \
 --header 'Content-Type: application/json' \
 --data-raw '{
@@ -320,8 +320,8 @@ curl --location --request POST 'https://你的newapi服务器地址/mj/submit/ac
 ### 上传文件到discord ✅
 
 ```bash
-curl --location --request POST 'https://你的newapi服务器地址/mj/submit/upload-discord-images' \
---header 'Authorization: Bearer $NEWAPI_API_KEY' \
+curl --location --request POST 'https://models.kapon.cloud/mj/submit/upload-discord-images' \
+--header 'Authorization: Bearer $KAPON_API_KEY' \
 --header 'Accept: application/json' \
 --header 'Content-Type: application/json' \
 --data-raw '{
@@ -349,9 +349,9 @@ curl --location --request POST 'https://你的newapi服务器地址/mj/submit/up
 ### 根据ID列表查询任务 ✅
 
 ```bash
-curl --location --request POST 'https://你的newapi服务器地址/mj/task/list-by-condition' \
+curl --location --request POST 'https://models.kapon.cloud/mj/task/list-by-condition' \
 --header 'Accept: application/json' \
---header 'Authorization: Bearer $NEWAPI_API_KEY' \
+--header 'Authorization: Bearer $KAPON_API_KEY' \
 --header 'Content-Type: application/json' \
 --data-raw '{
   "ids": []
@@ -393,9 +393,9 @@ curl --location --request POST 'https://你的newapi服务器地址/mj/task/list
 ### 指定ID获取任务 ✅
 
 ```bash
-curl --location --request GET 'https://你的newapi服务器地址/mj/task/{id}/fetch' \
+curl --location --request GET 'https://models.kapon.cloud/mj/task/{id}/fetch' \
 --header 'Accept: application/json' \
---header 'Authorization: Bearer $NEWAPI_API_KEY' \
+--header 'Authorization: Bearer $KAPON_API_KEY' \
 --header 'Content-Type: application/json'
 ```
 
@@ -432,9 +432,9 @@ curl --location --request GET 'https://你的newapi服务器地址/mj/task/{id}/
 ### 获取任务图片的seed ✅
 
 ```bash
-curl --location --request GET 'https://你的newapi服务器地址/mj/task/{id}/image-seed' \
+curl --location --request GET 'https://models.kapon.cloud/mj/task/{id}/image-seed' \
 --header 'Accept: application/json' \
---header 'Authorization: Bearer $NEWAPI_API_KEY' \
+--header 'Authorization: Bearer $KAPON_API_KEY' \
 --header 'Content-Type: application/json'
 ```
 
@@ -527,7 +527,7 @@ GET /mj/task/{id}/image-seed
 在请求头中包含以下内容进行 API 密钥认证：
 
 ```
-Authorization: Bearer $NEWAPI_API_KEY$OPENAI_API_KEY
+Authorization: Bearer $KAPON_API_KEY$OPENAI_API_KEY
 ```
 
 其中 `$OPENAI_API_KEY` 是您的 API 密钥。

@@ -1,22 +1,276 @@
-{#-
-  This file was automatically generated - do not edit
--#}
 {% extends "main.html" %}
+
 {% block htmltitle %}
-  <title>{{ config.site_name }}</title>
+  <title>{{ config.site_name }} - 专业的 AI 模型 API 服务平台</title>
 {% endblock %}
-{% block extrahead %}
-  <link rel="me" href="https://fosstodon.org/@squidfunk">
-{% endblock %}
+
 {% block styles %}
-  {{ super() }}
-  <link rel="stylesheet" href="{{ 'assets/stylesheets/home.css' | url }}">
-  <script>"Apple Computer, Inc."===navigator.vendor&&document.documentElement.classList.add("safari")</script>
+{{ super() }}
+<style>
+  /* 首页专用样式 */
+  .hero-section {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 4rem 2rem;
+    text-align: center;
+    margin: -2rem -2rem 2rem -2rem;
+    border-radius: 0 0 2rem 2rem;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Ccircle cx='30' cy='30' r='4'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E") repeat;
+    opacity: 0.3;
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .hero-title {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  .hero-subtitle {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+    line-height: 1.6;
+  }
+
+  .hero-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .hero-button {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.75rem 2rem;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    text-decoration: none;
+    border-radius: 2rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+  }
+
+  .hero-button:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+    color: white;
+  }
+
+  .hero-button.primary {
+    background: white;
+    color: #667eea;
+  }
+
+  .hero-button.primary:hover {
+    background: #f8f9fa;
+    color: #667eea;
+  }
+
+  .features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin: 3rem 0;
+  }
+
+  .feature-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    border: 1px solid #e2e8f0;
+  }
+
+  .feature-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  }
+
+  .feature-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    display: block;
+  }
+
+  .feature-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: #2d3748;
+  }
+
+  .feature-description {
+    color: #4a5568;
+    line-height: 1.6;
+  }
+
+  .stats-section {
+    background: linear-gradient(135deg, #f7fafc 0%, #edf2f7 100%);
+    padding: 3rem 2rem;
+    margin: 3rem -2rem;
+    border-radius: 1rem;
+    text-align: center;
+  }
+
+  .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .stat-item {
+    padding: 1rem;
+  }
+
+  .stat-number {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #667eea;
+    display: block;
+  }
+
+  .stat-label {
+    color: #4a5568;
+    font-weight: 500;
+    margin-top: 0.5rem;
+  }
+
+  .cta-section {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 3rem 2rem;
+    margin: 3rem -2rem -2rem -2rem;
+    border-radius: 1rem 1rem 0 0;
+    text-align: center;
+  }
+
+  .cta-title {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+
+  .cta-description {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+  }
+
+  @media (max-width: 768px) {
+    .hero-title {
+      font-size: 2rem;
+    }
+
+    .hero-subtitle {
+      font-size: 1rem;
+    }
+
+    .hero-buttons {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .features-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .stats-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+</style>
 {% endblock %}
-{% block announce %}{% endblock %}
-{% block hero %}
-  {% include "partials/parallax.html" %}
+
+{% block content %}
+<div class="hero-section">
+  <div class="hero-content">
+    <h1 class="hero-title">🚀 Kapon AI</h1>
+    <p class="hero-subtitle">专业的 AI 模型 API 服务平台<br>为开发者提供高质量、高性能的大语言模型接口服务</p>
+    <div class="hero-buttons">
+      <a href="https://models.kapon.cloud/" class="hero-button primary" target="_blank">访问控制台</a>
+      <a href="api/" class="hero-button">API 文档</a>
+      <a href="apps/" class="hero-button">应用指南</a>
+    </div>
+  </div>
+</div>
+
+<div class="features-grid">
+  <div class="feature-card">
+    <span class="feature-icon">🎯</span>
+    <h3 class="feature-title">多模型支持</h3>
+    <p class="feature-description">支持 GPT-4、Claude、Gemini 等主流模型，图像生成、音频处理、视频创作一应俱全</p>
+  </div>
+
+  <div class="feature-card">
+    <span class="feature-icon">⚡</span>
+    <h3 class="feature-title">高性能服务</h3>
+    <p class="feature-description">全球 CDN 加速，毫秒级响应时间，99.9% 服务可用性保障</p>
+  </div>
+
+  <div class="feature-card">
+    <span class="feature-icon">🔒</span>
+    <h3 class="feature-title">企业级安全</h3>
+    <p class="feature-description">API 密钥认证，数据传输加密，严格的隐私保护措施</p>
+  </div>
+
+  <div class="feature-card">
+    <span class="feature-icon">💰</span>
+    <h3 class="feature-title">灵活计费</h3>
+    <p class="feature-description">按使用量付费，多种套餐选择，透明的价格体系</p>
+  </div>
+</div>
+
+<div class="stats-section">
+  <h2 style="margin-bottom: 2rem; color: #2d3748;">平台数据</h2>
+  <div class="stats-grid">
+    <div class="stat-item">
+      <span class="stat-number">99.9%</span>
+      <div class="stat-label">服务可用性</div>
+    </div>
+    <div class="stat-item">
+      <span class="stat-number">&lt;500ms</span>
+      <div class="stat-label">平均响应时间</div>
+    </div>
+    <div class="stat-item">
+      <span class="stat-number">20+</span>
+      <div class="stat-label">支持模型</div>
+    </div>
+    <div class="stat-item">
+      <span class="stat-number">24/7</span>
+      <div class="stat-label">技术支持</div>
+    </div>
+  </div>
+</div>
+
+<div class="cta-section">
+  <h2 class="cta-title">准备开始您的 AI 之旅？</h2>
+  <p class="cta-description">立即注册获取免费额度，体验专业的 AI API 服务</p>
+  <a href="https://models.kapon.cloud/" class="hero-button primary" target="_blank">访问控制台</a>
+</div>
 {% endblock %}
-{% block tabs %}{% endblock %}
-{% block content %}{% endblock %}
-{% block footer %}{% endblock %}

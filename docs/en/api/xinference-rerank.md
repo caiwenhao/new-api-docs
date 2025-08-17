@@ -14,8 +14,8 @@ When using Xinference rerank API, simply set the `model` parameter to a rerank m
 ### Example Request
 
 ```bash
-curl https://your-newapi-server-address/v1/rerank \
-  -H "Authorization: Bearer $NEWAPI_API_KEY" \
+curl https://models.kapon.cloud/v1/rerank \
+  -H "Authorization: Bearer $KAPON_API_KEY" \
   -H "Content-Type: application/json" \
   -d '{
     "model": "jina-reranker-v2",

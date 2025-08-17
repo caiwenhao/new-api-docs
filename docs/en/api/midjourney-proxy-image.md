@@ -130,8 +130,8 @@ graph TD
 ### Submit Imagine Task ✅
 
 ```bash
-curl --location --request POST 'https://your-newapi-server-address/mj/submit/imagine' \
---header 'Authorization: Bearer $NEWAPI_API_KEY' \
+curl --location --request POST 'https://models.kapon.cloud/mj/submit/imagine' \
+--header 'Authorization: Bearer $KAPON_API_KEY' \
 --header 'Accept: application/json' \
 --header 'Content-Type: application/json' \
 --data-raw '{
@@ -165,8 +165,8 @@ curl --location --request POST 'https://your-newapi-server-address/mj/submit/ima
 ### Submit Blend Task ✅
 
 ```bash
-curl --location --request POST 'https://your-newapi-server-address/mj/submit/blend' \
---header 'Authorization: Bearer $NEWAPI_API_KEY' \
+curl --location --request POST 'https://models.kapon.cloud/mj/submit/blend' \
+--header 'Authorization: Bearer $KAPON_API_KEY' \
 --header 'Accept: application/json' \
 --header 'Content-Type: application/json' \
 --data-raw '{
@@ -203,8 +203,8 @@ curl --location --request POST 'https://your-newapi-server-address/mj/submit/ble
 ### Submit Describe Task ✅
 
 ```bash
-curl --location --request POST 'https://your-newapi-server-address/mj/submit/describe' \
---header 'Authorization: Bearer $NEWAPI_API_KEY' \
+curl --location --request POST 'https://models.kapon.cloud/mj/submit/describe' \
+--header 'Authorization: Bearer $KAPON_API_KEY' \
 --header 'Accept: application/json' \
 --header 'Content-Type: application/json' \
 --data-raw '{
@@ -237,8 +237,8 @@ curl --location --request POST 'https://your-newapi-server-address/mj/submit/des
 ### Submit Modal ✅
 
 ```bash
-curl --location --request POST 'https://your-newapi-server-address/mj/submit/modal' \
---header 'Authorization: Bearer $NEWAPI_API_KEY' \
+curl --location --request POST 'https://models.kapon.cloud/mj/submit/modal' \
+--header 'Authorization: Bearer $KAPON_API_KEY' \
 --header 'Accept: application/json' \
 --header 'Content-Type: application/json' \
 --data-raw '{
@@ -262,8 +262,8 @@ curl --location --request POST 'https://your-newapi-server-address/mj/submit/mod
 ### Submit swap_face Task ✅
 
 ```bash
-curl --location --request POST 'https://your-newapi-server-address/mj/insight-face/swap' \
---header 'Authorization: Bearer $NEWAPI_API_KEY' \
+curl --location --request POST 'https://models.kapon.cloud/mj/insight-face/swap' \
+--header 'Authorization: Bearer $KAPON_API_KEY' \
 --header 'Accept: application/json' \
 --header 'Content-Type: application/json' \
 --data-raw '{
@@ -285,8 +285,8 @@ curl --location --request POST 'https://your-newapi-server-address/mj/insight-fa
 ### Execute Action ✅
 
 ```bash
-curl --location --request POST 'https://your-newapi-server-address/mj/submit/action' \
---header 'Authorization: Bearer $NEWAPI_API_KEY' \
+curl --location --request POST 'https://models.kapon.cloud/mj/submit/action' \
+--header 'Authorization: Bearer $KAPON_API_KEY' \
 --header 'Accept: application/json' \
 --header 'Content-Type: application/json' \
 --data-raw '{
@@ -320,8 +320,8 @@ curl --location --request POST 'https://your-newapi-server-address/mj/submit/act
 ### Upload Files to Discord ✅
 
 ```bash
-curl --location --request POST 'https://your-newapi-server-address/mj/submit/upload-discord-images' \
---header 'Authorization: Bearer $NEWAPI_API_KEY' \
+curl --location --request POST 'https://models.kapon.cloud/mj/submit/upload-discord-images' \
+--header 'Authorization: Bearer $KAPON_API_KEY' \
 --header 'Accept: application/json' \
 --header 'Content-Type: application/json' \
 --data-raw '{
@@ -349,9 +349,9 @@ curl --location --request POST 'https://your-newapi-server-address/mj/submit/upl
 ### Query Tasks by ID List ✅
 
 ```bash
-curl --location --request POST 'https://your-newapi-server-address/mj/task/list-by-condition' \
+curl --location --request POST 'https://models.kapon.cloud/mj/task/list-by-condition' \
 --header 'Accept: application/json' \
---header 'Authorization: Bearer $NEWAPI_API_KEY' \
+--header 'Authorization: Bearer $KAPON_API_KEY' \
 --header 'Content-Type: application/json' \
 --data-raw '{
   "ids": []
@@ -393,9 +393,9 @@ curl --location --request POST 'https://your-newapi-server-address/mj/task/list-
 ### Get Task by Specific ID ✅
 
 ```bash
-curl --location --request GET 'https://your-newapi-server-address/mj/task/{id}/fetch' \
+curl --location --request GET 'https://models.kapon.cloud/mj/task/{id}/fetch' \
 --header 'Accept: application/json' \
---header 'Authorization: Bearer $NEWAPI_API_KEY' \
+--header 'Authorization: Bearer $KAPON_API_KEY' \
 --header 'Content-Type: application/json'
 ```
 
@@ -432,9 +432,9 @@ curl --location --request GET 'https://your-newapi-server-address/mj/task/{id}/f
 ### Get Task Image Seed ✅
 
 ```bash
-curl --location --request GET 'https://your-newapi-server-address/mj/task/{id}/image-seed' \
+curl --location --request GET 'https://models.kapon.cloud/mj/task/{id}/image-seed' \
 --header 'Accept: application/json' \
---header 'Authorization: Bearer $NEWAPI_API_KEY' \
+--header 'Authorization: Bearer $KAPON_API_KEY' \
 --header 'Content-Type: application/json'
 ```
 
@@ -527,10 +527,10 @@ Get the seed value of the image generated by the specified task.
 Include the following in the request header for API key authentication:
 
 ```
-Authorization: Bearer $NEWAPI_API_KEY
+Authorization: Bearer $KAPON_API_KEY
 ```
 
-Where `$NEWAPI_API_KEY` is your API key.
+Where `$KAPON_API_KEY` is your API key.
 
 ### Request Body Parameters
 

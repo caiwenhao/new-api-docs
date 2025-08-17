@@ -14,9 +14,9 @@ For related guidelines, please refer to the OpenAI official website: [Responses]
 ### Basic Text Response ✅
 
 ```bash
-curl https://your-newapi-server-address/v1/responses \
+curl https://models.kapon.cloud/v1/responses \
   -H "Content-Type: application/json" \
-  -H "Authorization: Bearer $NEWAPI_API_KEY" \
+  -H "Authorization: Bearer $KAPON_API_KEY" \
   -d '{
     "model": "gpt-4.1",
     "input": "Tell a three-sentence bedtime story about a unicorn."
@@ -87,9 +87,9 @@ curl https://your-newapi-server-address/v1/responses \
 ### Image Analysis Response ✅
 
 ```bash
-curl https://your-newapi-server-address/v1/responses \
+curl https://models.kapon.cloud/v1/responses \
   -H "Content-Type: application/json" \
-  -H "Authorization: Bearer $NEWAPI_API_KEY" \
+  -H "Authorization: Bearer $KAPON_API_KEY" \
   -d '{
     "model": "gpt-4.1",
     "input": [
@@ -171,9 +171,9 @@ curl https://your-newapi-server-address/v1/responses \
 ### Web Search Tool ✅
 
 ```bash
-curl https://your-newapi-server-address/v1/responses \
+curl https://models.kapon.cloud/v1/responses \
   -H "Content-Type: application/json" \
-  -H "Authorization: Bearer $NEWAPI_API_KEY" \
+  -H "Authorization: Bearer $KAPON_API_KEY" \
   -d '{
     "model": "gpt-4.1",
     "tools": [{ "type": "web_search_preview" }],
@@ -285,9 +285,9 @@ curl https://your-newapi-server-address/v1/responses \
 ### File Search Tool ✅
 
 ```bash
-curl https://your-newapi-server-address/v1/responses \
+curl https://models.kapon.cloud/v1/responses \
   -H "Content-Type: application/json" \
-  -H "Authorization: Bearer $NEWAPI_API_KEY" \
+  -H "Authorization: Bearer $KAPON_API_KEY" \
   -d '{
     "model": "gpt-4.1",
     "tools": [{
@@ -434,9 +434,9 @@ curl https://your-newapi-server-address/v1/responses \
 ### Streaming Response ✅
 
 ```bash
-curl https://your-newapi-server-address/v1/responses \
+curl https://models.kapon.cloud/v1/responses \
   -H "Content-Type: application/json" \
-  -H "Authorization: Bearer $NEWAPI_API_KEY" \
+  -H "Authorization: Bearer $KAPON_API_KEY" \
   -d '{
     "model": "gpt-4.1",
     "instructions": "You are a helpful assistant.",
@@ -500,9 +500,9 @@ data: {"type":"response.completed","response":{"id":"resp_67c9fdcecf488190bdd9a0
 ### Function Calling ✅
 
 ```bash
-curl https://your-newapi-server-address/v1/responses \
+curl https://models.kapon.cloud/v1/responses \
   -H "Content-Type: application/json" \
-  -H "Authorization: Bearer $NEWAPI_API_KEY" \
+  -H "Authorization: Bearer $KAPON_API_KEY" \
   -d '{
     "model": "gpt-4.1",
     "input": "What is the weather in Boston today?",
@@ -614,9 +614,9 @@ curl https://your-newapi-server-address/v1/responses \
 ### Reasoning Ability ✅
 
 ```bash
-curl https://your-newapi-server-address/v1/responses \
+curl https://models.kapon.cloud/v1/responses \
   -H "Content-Type: application/json" \
-  -H "Authorization: Bearer $NEWAPI_API_KEY" \
+  -H "Authorization: Bearer $KAPON_API_KEY" \
   -d '{
     "model": "o3-mini",
     "input": "How many woodpeckers can peck wood?",
@@ -702,10 +702,10 @@ Create a model response. Provide text or image input to generate text or JSON ou
 Include the following in the request header for API key authentication:
 
 ```
-Authorization: Bearer $NEWAPI_API_KEY
+Authorization: Bearer $KAPON_API_KEY
 ```
 
-Where `$NEWAPI_API_KEY` is your API key.
+Where `$KAPON_API_KEY` is your API key.
 
 ### Request Body Parameters
 

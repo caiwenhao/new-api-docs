@@ -27,12 +27,12 @@ services:
       - .:/app/docs
     environment:
       - UPDATE_INTERVAL=1800  # 30分钟更新一次
-      - GITHUB_REPO=Calcium-Ion/new-api
+      # - GITHUB_REPO=  # 移除开源项目依赖
       - DOCS_DIR=/app/docs
-      - USE_PROXY=true
-      - GITHUB_PROXY=
-      - AFDIAN_USER_ID=
-      - AFDIAN_TOKEN=
+      - USE_PROXY=false
+      # - GITHUB_PROXY=  # 移除 GitHub 代理
+      # - AFDIAN_USER_ID=  # 移除爱发电依赖
+      # - AFDIAN_TOKEN=  # 移除爱发电依赖
       - TZ=Asia/Shanghai
     networks:
       - docs-network

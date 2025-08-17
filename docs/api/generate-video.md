@@ -40,7 +40,7 @@ POST /v1/video/generations
 ### 可灵AI 示例
 
 ```bash
-curl https://你的newapi服务器地址/v1/video/generations \
+curl https://models.kapon.cloud/v1/video/generations \
   --request POST \
   --header 'Authorization: ' \
   --header 'Content-Type: application/json' \
@@ -61,7 +61,7 @@ curl https://你的newapi服务器地址/v1/video/generations \
 ### 即梦AI 示例
 
 ```bash
-curl https://你的newapi服务器地址/v1/video/generations \
+curl https://models.kapon.cloud/v1/video/generations \
   --request POST \
   --header 'Authorization: ' \
   --header 'Content-Type: application/json' \
@@ -82,7 +82,7 @@ curl https://你的newapi服务器地址/v1/video/generations \
 ### Vidu 渠道示例
 
 ```bash
-curl https://你的newapi服务器地址/v1/video/generations \
+curl https://models.kapon.cloud/v1/video/generations \
   --request POST \
   --header 'Authorization: ' \
   --header 'Content-Type: application/json' \

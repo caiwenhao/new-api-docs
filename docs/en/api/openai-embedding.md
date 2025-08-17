@@ -20,9 +20,9 @@ Important notes:
 ### Create Text Embeddings ✅
 
 ```bash
-curl https://your-newapi-server-address/v1/embeddings \
+curl https://models.kapon.cloud/v1/embeddings \
   -H "Content-Type: application/json" \
-  -H "Authorization: Bearer $NEWAPI_API_KEY" \
+  -H "Authorization: Bearer $KAPON_API_KEY" \
   -d '{
     "input": "The food was delicious and the waiter...",
     "model": "text-embedding-ada-002",
@@ -58,9 +58,9 @@ curl https://your-newapi-server-address/v1/embeddings \
 ### Batch Create Embeddings ✅
 
 ```bash
-curl https://your-newapi-server-address/v1/embeddings \
+curl https://models.kapon.cloud/v1/embeddings \
   -H "Content-Type: application/json" \
-  -H "Authorization: Bearer $NEWAPI_API_KEY" \
+  -H "Authorization: Bearer $KAPON_API_KEY" \
   -d '{
     "input": ["The food was delicious", "The waiter was friendly"],
     "model": "text-embedding-ada-002",
@@ -114,10 +114,10 @@ Create embedding vectors that represent the input text.
 Include the following in the request header for API key authentication:
 
 ```
-Authorization: Bearer $NEWAPI_API_KEY
+Authorization: Bearer $KAPON_API_KEY
 ```
 
-Where `$NEWAPI_API_KEY` is your API key.
+Where `$KAPON_API_KEY` is your API key.
 
 ### Request Body Parameters
 

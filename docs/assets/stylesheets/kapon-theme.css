@@ -1,0 +1,329 @@
+/* Kapon AI 极致简约主题样式 */
+
+/* 全局变量定义 */
+:root {
+  /* 主色调 - 渐变蓝紫色 */
+  --kapon-primary: #667eea;
+  --kapon-primary-dark: #764ba2;
+  --kapon-accent: #f093fb;
+  
+  /* 中性色 */
+  --kapon-text-primary: #2d3748;
+  --kapon-text-secondary: #4a5568;
+  --kapon-text-muted: #718096;
+  --kapon-bg-primary: #ffffff;
+  --kapon-bg-secondary: #f7fafc;
+  --kapon-border: #e2e8f0;
+  
+  /* 阴影 */
+  --kapon-shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.1);
+  --kapon-shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --kapon-shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+  
+  /* 圆角 */
+  --kapon-radius-sm: 4px;
+  --kapon-radius-md: 8px;
+  --kapon-radius-lg: 12px;
+  
+  /* 间距 */
+  --kapon-space-xs: 0.25rem;
+  --kapon-space-sm: 0.5rem;
+  --kapon-space-md: 1rem;
+  --kapon-space-lg: 1.5rem;
+  --kapon-space-xl: 2rem;
+}
+
+/* 深色模式变量 */
+[data-md-color-scheme="slate"] {
+  --kapon-text-primary: #f7fafc;
+  --kapon-text-secondary: #e2e8f0;
+  --kapon-text-muted: #a0aec0;
+  --kapon-bg-primary: #1a202c;
+  --kapon-bg-secondary: #2d3748;
+  --kapon-border: #4a5568;
+}
+
+/* 主体布局优化 */
+.md-main {
+  background: linear-gradient(135deg, var(--kapon-bg-primary) 0%, var(--kapon-bg-secondary) 100%);
+}
+
+/* 导航栏样式优化 */
+.md-header {
+  background: linear-gradient(90deg, var(--kapon-primary), var(--kapon-primary-dark));
+  box-shadow: var(--kapon-shadow-md);
+  backdrop-filter: blur(10px);
+}
+
+.md-header__title {
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+/* 侧边栏优化 */
+.md-sidebar {
+  background: var(--kapon-bg-primary);
+  border-right: 1px solid var(--kapon-border);
+}
+
+.md-nav__title {
+  font-weight: 600;
+  color: var(--kapon-text-primary);
+  border-bottom: 2px solid var(--kapon-primary);
+  padding-bottom: var(--kapon-space-sm);
+  margin-bottom: var(--kapon-space-md);
+}
+
+.md-nav__link {
+  color: var(--kapon-text-secondary);
+  transition: all 0.2s ease;
+  border-radius: var(--kapon-radius-sm);
+  margin: var(--kapon-space-xs) 0;
+}
+
+.md-nav__link:hover {
+  background: linear-gradient(90deg, var(--kapon-primary), var(--kapon-accent));
+  color: white;
+  transform: translateX(4px);
+}
+
+.md-nav__link--active {
+  background: linear-gradient(90deg, var(--kapon-primary), var(--kapon-primary-dark));
+  color: white;
+  font-weight: 500;
+}
+
+/* 内容区域优化 */
+.md-content {
+  background: var(--kapon-bg-primary);
+  border-radius: var(--kapon-radius-lg);
+  box-shadow: var(--kapon-shadow-sm);
+  margin: var(--kapon-space-md);
+  padding: var(--kapon-space-xl);
+}
+
+/* 标题样式优化 */
+.md-typeset h1 {
+  background: linear-gradient(90deg, var(--kapon-primary), var(--kapon-primary-dark));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 700;
+  margin-bottom: var(--kapon-space-lg);
+  position: relative;
+}
+
+.md-typeset h1::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(90deg, var(--kapon-primary), var(--kapon-accent));
+  border-radius: var(--kapon-radius-sm);
+}
+
+.md-typeset h2 {
+  color: var(--kapon-text-primary);
+  font-weight: 600;
+  border-bottom: 2px solid var(--kapon-border);
+  padding-bottom: var(--kapon-space-sm);
+  margin-top: var(--kapon-space-xl);
+  margin-bottom: var(--kapon-space-lg);
+}
+
+.md-typeset h3 {
+  color: var(--kapon-primary);
+  font-weight: 600;
+  margin-top: var(--kapon-space-lg);
+  margin-bottom: var(--kapon-space-md);
+}
+
+/* 代码块优化 */
+.md-typeset pre {
+  background: var(--kapon-bg-secondary);
+  border: 1px solid var(--kapon-border);
+  border-radius: var(--kapon-radius-md);
+  box-shadow: var(--kapon-shadow-sm);
+  position: relative;
+  overflow: hidden;
+}
+
+.md-typeset pre::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--kapon-primary), var(--kapon-accent));
+}
+
+.md-typeset code {
+  background: var(--kapon-bg-secondary);
+  color: var(--kapon-primary);
+  padding: var(--kapon-space-xs) var(--kapon-space-sm);
+  border-radius: var(--kapon-radius-sm);
+  font-weight: 500;
+}
+
+/* 表格优化 */
+.md-typeset table {
+  border-radius: var(--kapon-radius-md);
+  overflow: hidden;
+  box-shadow: var(--kapon-shadow-sm);
+  border: 1px solid var(--kapon-border);
+}
+
+.md-typeset table th {
+  background: linear-gradient(90deg, var(--kapon-primary), var(--kapon-primary-dark));
+  color: white;
+  font-weight: 600;
+  text-align: center;
+}
+
+.md-typeset table td {
+  border-bottom: 1px solid var(--kapon-border);
+  padding: var(--kapon-space-md);
+}
+
+.md-typeset table tr:hover {
+  background: var(--kapon-bg-secondary);
+}
+
+/* 按钮和链接优化 */
+.md-typeset a {
+  color: var(--kapon-primary);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: all 0.2s ease;
+}
+
+.md-typeset a:hover {
+  border-bottom-color: var(--kapon-primary);
+  color: var(--kapon-primary-dark);
+}
+
+/* 警告框优化 */
+.md-typeset .admonition {
+  border-radius: var(--kapon-radius-md);
+  box-shadow: var(--kapon-shadow-sm);
+  border: none;
+  overflow: hidden;
+}
+
+.md-typeset .admonition-title {
+  font-weight: 600;
+  margin: 0;
+  padding: var(--kapon-space-md);
+}
+
+.md-typeset .admonition.note {
+  border-left: 4px solid var(--kapon-primary);
+}
+
+.md-typeset .admonition.tip {
+  border-left: 4px solid #48bb78;
+}
+
+.md-typeset .admonition.warning {
+  border-left: 4px solid #ed8936;
+}
+
+.md-typeset .admonition.danger {
+  border-left: 4px solid #f56565;
+}
+
+/* 页脚优化 - 极简版本 */
+.md-footer {
+  background: linear-gradient(90deg, var(--kapon-primary), var(--kapon-primary-dark));
+  color: white;
+  margin-top: 2rem;
+  border: none;
+  box-shadow: none;
+}
+
+.md-footer-meta {
+  background: transparent;
+  padding: 1.5rem 0;
+  border: none;
+}
+
+.md-footer-copyright {
+  text-align: center;
+  width: 100%;
+  margin: 0;
+}
+
+.md-footer-copyright__highlight {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.95);
+  letter-spacing: 0.5px;
+  line-height: 1.6;
+}
+
+/* 隐藏默认的页脚导航和社交链接 */
+.md-footer-nav,
+.md-footer-social {
+  display: none;
+}
+
+/* 搜索框优化 */
+.md-search__input {
+  border-radius: var(--kapon-radius-lg);
+  border: 2px solid var(--kapon-border);
+  transition: all 0.2s ease;
+}
+
+.md-search__input:focus {
+  border-color: var(--kapon-primary);
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+/* 响应式优化 */
+@media screen and (max-width: 768px) {
+  .md-content {
+    margin: var(--kapon-space-sm);
+    padding: var(--kapon-space-lg);
+  }
+  
+  .md-typeset h1 {
+    font-size: 1.8rem;
+  }
+}
+
+/* 动画效果 */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.md-content {
+  animation: fadeInUp 0.5s ease-out;
+}
+
+/* 滚动条优化 */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--kapon-bg-secondary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, var(--kapon-primary), var(--kapon-primary-dark));
+  border-radius: var(--kapon-radius-sm);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, var(--kapon-primary-dark), var(--kapon-primary));
+}

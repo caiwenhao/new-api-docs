@@ -16,8 +16,8 @@ OpenAI 音频 API 提供了三个主要功能:
 ### 文本转语音 ✅
 
 ```bash
-curl https://你的newapi服务器地址/v1/audio/speech \
-  -H "Authorization: Bearer $NEWAPI_API_KEY" \
+curl https://models.kapon.cloud/v1/audio/speech \
+  -H "Authorization: Bearer $KAPON_API_KEY" \
   -H "Content-Type: application/json" \
   -d '{
     "model": "tts-1",
@@ -30,8 +30,8 @@ curl https://你的newapi服务器地址/v1/audio/speech \
 ### 语音转文本 ✅
 
 ```bash
-curl https://你的newapi服务器地址/v1/audio/transcriptions \
-  -H "Authorization: Bearer $NEWAPI_API_KEY" \
+curl https://models.kapon.cloud/v1/audio/transcriptions \
+  -H "Authorization: Bearer $KAPON_API_KEY" \
   -H "Content-Type: multipart/form-data" \
   -F file="@/path/to/file/audio.mp3" \
   -F model="whisper-1"
@@ -48,8 +48,8 @@ curl https://你的newapi服务器地址/v1/audio/transcriptions \
 ### 音频翻译 ✅
 
 ```bash
-curl https://你的newapi服务器地址/v1/audio/translations \
-  -H "Authorization: Bearer $NEWAPI_API_KEY" \
+curl https://models.kapon.cloud/v1/audio/translations \
+  -H "Authorization: Bearer $KAPON_API_KEY" \
   -H "Content-Type: multipart/form-data" \
   -F file="@/path/to/file/chinese.mp3" \
   -F model="whisper-1"
@@ -93,10 +93,10 @@ POST /v1/audio/translations
 在请求头中包含以下内容进行 API 密钥认证：
 
 ```
-Authorization: Bearer $NEWAPI_API_KEY
+Authorization: Bearer $KAPON_API_KEY
 ```
 
-其中 `$NEWAPI_API_KEY` 是您的 API 密钥。
+其中 `$KAPON_API_KEY` 是您的 API 密钥。
 
 ### 请求体参数
 

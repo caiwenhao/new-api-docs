@@ -12,7 +12,7 @@ Google Gemini API 支持使用图片、音频、代码、工具等生成内容�
 ### 基础文本对话 ✅
 
 ```bash
-curl "https://你的newapi服务器地址/v1beta/models/gemini-2.0-flash:generateContent?key=$NEWAPI_API_KEY" \
+curl "https://models.kapon.cloud/v1beta/models/gemini-2.0-flash:generateContent?key=$KAPON_API_KEY" \
     -H 'Content-Type: application/json' \
     -X POST \
     -d '{
@@ -50,7 +50,7 @@ cat > "$TEMP_JSON" << EOF
 }
 EOF
 
-curl "https://你的newapi服务器地址/v1beta/models/gemini-2.0-flash:generateContent?key=$NEWAPI_API_KEY" \
+curl "https://models.kapon.cloud/v1beta/models/gemini-2.0-flash:generateContent?key=$KAPON_API_KEY" \
     -H 'Content-Type: application/json' \
     -X POST \
     -d "@$TEMP_JSON" 2> /dev/null
@@ -90,7 +90,7 @@ cat > tools.json << EOF
 } 
 EOF
 
-curl "https://你的newapi服务器地址/v1beta/models/gemini-2.0-flash:generateContent?key=$NEWAPI_API_KEY" \
+curl "https://models.kapon.cloud/v1beta/models/gemini-2.0-flash:generateContent?key=$KAPON_API_KEY" \
   -H 'Content-Type: application/json' \
   -d @<(echo '
   {
@@ -118,7 +118,7 @@ curl "https://你的newapi服务器地址/v1beta/models/gemini-2.0-flash:generat
 ### JSON 模式响应 ✅
 
 ```bash
-curl "https://你的newapi服务器地址/v1beta/models/gemini-2.0-flash:generateContent?key=$NEWAPI_API_KEY" \
+curl "https://models.kapon.cloud/v1beta/models/gemini-2.0-flash:generateContent?key=$KAPON_API_KEY" \
 -H 'Content-Type: application/json' \
 -d '{
     "contents": [{
@@ -156,7 +156,7 @@ else
 fi
 AUDIO_B64=$(base64 $B64FLAGS "$AUDIO_PATH")
 
-curl "https://你的newapi服务器地址/v1beta/models/gemini-2.0-flash:generateContent?key=$NEWAPI_API_KEY" \
+curl "https://models.kapon.cloud/v1beta/models/gemini-2.0-flash:generateContent?key=$KAPON_API_KEY" \
   -H 'Content-Type: application/json' \
   -X POST \
   -d '{
@@ -184,7 +184,7 @@ else
 fi
 VIDEO_B64=$(base64 $B64FLAGS "$VIDEO_PATH")
 
-curl "https://你的newapi服务器地址/v1beta/models/gemini-2.0-flash:generateContent?key=$NEWAPI_API_KEY" \
+curl "https://models.kapon.cloud/v1beta/models/gemini-2.0-flash:generateContent?key=$KAPON_API_KEY" \
   -H 'Content-Type: application/json' \
   -X POST \
   -d '{
@@ -214,7 +214,7 @@ PDF_B64=$(base64 $B64FLAGS "$PDF_PATH")
 
 echo $MIME_TYPE
 
-curl "https://你的newapi服务器地址/v1beta/models/gemini-2.0-flash:generateContent?key=$NEWAPI_API_KEY" \
+curl "https://models.kapon.cloud/v1beta/models/gemini-2.0-flash:generateContent?key=$KAPON_API_KEY" \
   -H 'Content-Type: application/json' \
   -X POST \
   -d '{
@@ -230,7 +230,7 @@ curl "https://你的newapi服务器地址/v1beta/models/gemini-2.0-flash:generat
 ### 聊天对话 ✅
 
 ```bash
-curl https://你的newapi服务器地址/v1beta/models/gemini-2.0-flash:generateContent?key=$NEWAPI_API_KEY \
+curl https://models.kapon.cloud/v1beta/models/gemini-2.0-flash:generateContent?key=$KAPON_API_KEY \
     -H 'Content-Type: application/json' \
     -X POST \
     -d '{
@@ -251,7 +251,7 @@ curl https://你的newapi服务器地址/v1beta/models/gemini-2.0-flash:generate
 ### 流式响应 ✅
 
 ```bash
-curl "https://你的newapi服务器地址/v1beta/models/gemini-2.0-flash:streamGenerateContent?alt=sse&key=$NEWAPI_API_KEY" \
+curl "https://models.kapon.cloud/v1beta/models/gemini-2.0-flash:streamGenerateContent?alt=sse&key=$KAPON_API_KEY" \
     -H 'Content-Type: application/json' \
     --no-buffer \
     -d '{
@@ -264,7 +264,7 @@ curl "https://你的newapi服务器地址/v1beta/models/gemini-2.0-flash:streamG
 ### 代码执行 ✅
 
 ```bash
-curl "https://你的newapi服务器地址/v1beta/models/gemini-2.0-flash:generateContent?key=$NEWAPI_API_KEY" \
+curl "https://models.kapon.cloud/v1beta/models/gemini-2.0-flash:generateContent?key=$KAPON_API_KEY" \
     -H 'Content-Type: application/json' \
     -X POST \
     -d '{
@@ -280,7 +280,7 @@ curl "https://你的newapi服务器地址/v1beta/models/gemini-2.0-flash:generat
 ### 生成配置 ✅
 
 ```bash
-curl https://你的newapi服务器地址/v1beta/models/gemini-2.0-flash:generateContent?key=$NEWAPI_API_KEY \
+curl https://models.kapon.cloud/v1beta/models/gemini-2.0-flash:generateContent?key=$KAPON_API_KEY \
     -H 'Content-Type: application/json' \
     -X POST \
     -d '{
@@ -313,7 +313,7 @@ echo '{
         "parts":[{
             "text": "'I support Martians Soccer Club and I think Jupiterians Football Club sucks! Write a ironic phrase about them.'"}]}]}' > request.json
 
-curl "https://你的newapi服务器地址/v1beta/models/gemini-2.0-flash:generateContent?key=$NEWAPI_API_KEY" \
+curl "https://models.kapon.cloud/v1beta/models/gemini-2.0-flash:generateContent?key=$KAPON_API_KEY" \
     -H 'Content-Type: application/json' \
     -X POST \
     -d @request.json 2> /dev/null
@@ -322,7 +322,7 @@ curl "https://你的newapi服务器地址/v1beta/models/gemini-2.0-flash:generat
 ### 系统指令 ✅
 
 ```bash
-curl "https://你的newapi服务器地址/v1beta/models/gemini-2.0-flash:generateContent?key=$NEWAPI_API_KEY" \
+curl "https://models.kapon.cloud/v1beta/models/gemini-2.0-flash:generateContent?key=$KAPON_API_KEY" \
 -H 'Content-Type: application/json' \
 -d '{ "system_instruction": {
     "parts":
@@ -338,12 +338,12 @@ curl "https://你的newapi服务器地址/v1beta/models/gemini-2.0-flash:generat
 
 #### 生成内容
 ```
-POST https://你的newapi服务器地址/v1beta/{model=models/*}:generateContent
+POST https://models.kapon.cloud/v1beta/{model=models/*}:generateContent
 ```
 
 #### 流式生成内容
 ```
-POST https://你的newapi服务器地址/v1beta/{model=models/*}:streamGenerateContent
+POST https://models.kapon.cloud/v1beta/{model=models/*}:streamGenerateContent
 ```
 
 ### 鉴权方法
@@ -351,10 +351,10 @@ POST https://你的newapi服务器地址/v1beta/{model=models/*}:streamGenerateC
 在请求URL参数中包含API密钥：
 
 ```
-?key=$NEWAPI_API_KEY
+?key=$KAPON_API_KEY
 ```
 
-其中 `$NEWAPI_API_KEY` 是您的 Google AI API 密钥。
+其中 `$KAPON_API_KEY` 是您的 Google AI API 密钥。
 
 ### 路径参数
 

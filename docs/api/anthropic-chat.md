@@ -13,10 +13,10 @@
 ### 基础文本对话 ✅
 
 ```bash
-curl https://你的newapi服务器地址/v1/messages \
+curl https://models.kapon.cloud/v1/messages \
      --header "anthropic-version: 2023-06-01" \
      --header "content-type: application/json" \
-     --header "x-api-key: $NEWAPI_API_KEY" \
+     --header "x-api-key: $KAPON_API_KEY" \
      --data \
 '{
     "model": "claude-3-5-sonnet-20241022",
@@ -52,10 +52,10 @@ curl https://你的newapi服务器地址/v1/messages \
 ### 图像分析对话 ✅
 
 ```bash
-curl https://你的newapi服务器地址/v1/messages \
+curl https://models.kapon.cloud/v1/messages \
      --header "anthropic-version: 2023-06-01" \
      --header "content-type: application/json" \
-     --header "x-api-key: $NEWAPI_API_KEY" \
+     --header "x-api-key: $KAPON_API_KEY" \
      --data \
 '{
     "model": "claude-3-5-sonnet-20241022",
@@ -106,10 +106,10 @@ curl https://你的newapi服务器地址/v1/messages \
 ### 工具调用 ✅
 
 ```bash
-curl https://你的newapi服务器地址/v1/messages \
+curl https://models.kapon.cloud/v1/messages \
      --header "anthropic-version: 2023-06-01" \
      --header "content-type: application/json" \
-     --header "x-api-key: $NEWAPI_API_KEY" \
+     --header "x-api-key: $KAPON_API_KEY" \
      --data \
 '{
     "model": "claude-3-5-sonnet-20241022",
@@ -165,10 +165,10 @@ curl https://你的newapi服务器地址/v1/messages \
 ### 流式响应 ✅
 
 ```bash
-curl https://你的newapi服务器地址/v1/messages \
+curl https://models.kapon.cloud/v1/messages \
      --header "anthropic-version: 2023-06-01" \
      --header "content-type: application/json" \
-     --header "x-api-key: $NEWAPI_API_KEY" \
+     --header "x-api-key: $KAPON_API_KEY" \
      --data \
 '{
     "model": "claude-3-5-sonnet-20241022",
@@ -253,10 +253,10 @@ POST /v1/messages
 在请求头中包含以下内容进行 API 密钥认证：
 
 ```
-x-api-key: $NEWAPI_API_KEY
+x-api-key: $KAPON_API_KEY
 ```
 
-其中 `$NEWAPI_API_KEY` 是您的 API 密钥。您可以通过控制台获取 API 密钥，每个密钥仅限于一个工作区使用。
+其中 `$KAPON_API_KEY` 是您的 API 密钥。您可以通过控制台获取 API 密钥，每个密钥仅限于一个工作区使用。
 
 ### 请求头参数
 

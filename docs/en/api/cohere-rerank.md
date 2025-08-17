@@ -15,8 +15,8 @@ Given a query and a list of texts, the Rerank API will sort the texts based on t
 ### Basic Rerank Request ✅
 
 ```bash
-curl https://your-newapi-server-address/v1/rerank \
-  -H "Authorization: Bearer $NEWAPI_API_KEY" \
+curl https://models.kapon.cloud/v1/rerank \
+  -H "Authorization: Bearer $KAPON_API_KEY" \
   -H "Content-Type: application/json" \
   -d '{
     "model": "rerank-v3.5",
@@ -66,8 +66,8 @@ curl https://your-newapi-server-address/v1/rerank \
 ### Using Structured Data ✅
 
 ```bash
-curl https://your-newapi-server-address/v1/rerank \
-  -H "Authorization: Bearer $NEWAPI_API_KEY" \
+curl https://models.kapon.cloud/v1/rerank \
+  -H "Authorization: Bearer $KAPON_API_KEY" \
   -H "Content-Type: application/json" \
   -d '{
     "model": "rerank-v3.5",
@@ -126,10 +126,10 @@ Sort a list of texts based on their relevance to the query.
 Include the following in the request header for API key authentication:
 
 ```
-Authorization: Bearer $NEWAPI_API_KEY
+Authorization: Bearer $KAPON_API_KEY
 ```
 
-Where `$NEWAPI_API_KEY` is your API key.
+Where `$KAPON_API_KEY` is your API key.
 
 ### Request Header Parameters
 

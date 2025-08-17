@@ -18,9 +18,9 @@
 
 ```bash
 # 基础图片生成
-curl https://你的newapi服务器地址/v1/images/generations \
+curl https://models.kapon.cloud/v1/images/generations \
   -H "Content-Type: application/json" \
-  -H "Authorization: Bearer $NEWAPI_API_KEY" \
+  -H "Authorization: Bearer $KAPON_API_KEY" \
   -d '{
     "model": "dall-e-3",
     "prompt": "一只可爱的小海獭",
@@ -29,9 +29,9 @@ curl https://你的newapi服务器地址/v1/images/generations \
   }'
 
 # 高质量图片生成
-curl https://你的newapi服务器地址/v1/images/generations \
+curl https://models.kapon.cloud/v1/images/generations \
   -H "Content-Type: application/json" \
-  -H "Authorization: Bearer $NEWAPI_API_KEY" \
+  -H "Authorization: Bearer $KAPON_API_KEY" \
   -d '{
     "model": "dall-e-3",
     "prompt": "一只可爱的小海獭",
@@ -41,9 +41,9 @@ curl https://你的newapi服务器地址/v1/images/generations \
   }'
 
 # 使用 base64 返回格式
-curl https://你的newapi服务器地址/v1/images/generations \
+curl https://models.kapon.cloud/v1/images/generations \
   -H "Content-Type: application/json" \
-  -H "Authorization: Bearer $NEWAPI_API_KEY" \
+  -H "Authorization: Bearer $KAPON_API_KEY" \
   -d '{
     "model": "dall-e-3",
     "prompt": "一只可爱的小海獭",
@@ -69,8 +69,8 @@ curl https://你的newapi服务器地址/v1/images/generations \
 
 ```bash
 # dall-e-2 图片编辑
-curl https://你的newapi服务器地址/v1/images/edits \
-  -H "Authorization: Bearer $NEWAPI_API_KEY" \
+curl https://models.kapon.cloud/v1/images/edits \
+  -H "Authorization: Bearer $KAPON_API_KEY" \
   -F image="@otter.png" \
   -F mask="@mask.png" \
   -F prompt="一只戴着贝雷帽的可爱小海獭" \
@@ -78,8 +78,8 @@ curl https://你的newapi服务器地址/v1/images/edits \
   -F size="1024x1024"
 
 # gpt-image-1 多图片编辑示例
-curl https://你的newapi服务器地址/v1/images/edits \
-  -H "Authorization: Bearer $NEWAPI_API_KEY" \
+curl https://models.kapon.cloud/v1/images/edits \
+  -H "Authorization: Bearer $KAPON_API_KEY" \
   -F "model=gpt-image-1" \
   -F "image[]=@body-lotion.png" \
   -F "image[]=@bath-bomb.png" \
@@ -130,8 +130,8 @@ curl https://你的newapi服务器地址/v1/images/edits \
 ### 生成图片变体 ✅
 
 ```bash
-curl https://你的newapi服务器地址/v1/images/variations \
-  -H "Authorization: Bearer $NEWAPI_API_KEY" \
+curl https://models.kapon.cloud/v1/images/variations \
+  -H "Authorization: Bearer $KAPON_API_KEY" \
   -F image="@otter.png" \
   -F n=2 \
   -F size="1024x1024"
@@ -183,7 +183,7 @@ POST /v1/images/variations
 在请求头中包含以下内容进行 API 密钥认证：
 
 ```
-Authorization: Bearer $NEWAPI_API_KEY
+Authorization: Bearer $KAPON_API_KEY
 ```
 
 其中 `$OPENAI_API_KEY` 是您的 API 密钥。

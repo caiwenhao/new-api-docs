@@ -26,8 +26,8 @@ Through the API, you can easily integrate AI music generation capabilities into 
 ### Generate Song ✅
 
 ```bash
-curl --location 'https://your-newapi-server-address/suno/submit/music' \
---header 'Authorization: Bearer $NEWAPI_API_KEY' \
+curl --location 'https://models.kapon.cloud/suno/submit/music' \
+--header 'Authorization: Bearer $KAPON_API_KEY' \
 --header 'Content-Type: application/json' \
 --data '{
     "prompt":"[Verse]\nWalking down the streets\nBeneath the city lights\nNeon signs flickering\nLighting up the night\nHeart beating faster\nLike a drum in my chest\nI'\''m alive in this moment\nFeeling so blessed\n\nStilettos on the pavement\nStepping with grace\nSurrounded by the people\nMoving at their own pace\nThe rhythm of the city\nIt pulses in my veins\nLost in the energy\nAs my worries drain\n\n[Verse 2]\nConcrete jungle shining\nWith its dazzling glow\nEvery corner hiding secrets that only locals know\nA symphony of chaos\nBut it'\''s music to my ears\nThe hustle and the bustle\nWiping away my fears",
@@ -50,8 +50,8 @@ curl --location 'https://your-newapi-server-address/suno/submit/music' \
 ### Generate Lyrics ✅
 
 ```bash
-curl --location 'https://your-newapi-server-address/suno/submit/lyrics' \
---header 'Authorization: Bearer $NEWAPI_API_KEY' \
+curl --location 'https://models.kapon.cloud/suno/submit/lyrics' \
+--header 'Authorization: Bearer $KAPON_API_KEY' \
 --header 'Content-Type: application/json' \
 --data '{
     "prompt":"dance"
@@ -71,8 +71,8 @@ curl --location 'https://your-newapi-server-address/suno/submit/lyrics' \
 ### Upload Audio ❌
 
 ```bash
-curl --location 'https://your-newapi-server-address/suno/uploads/audio-url' \
---header 'Authorization: Bearer $NEWAPI_API_KEY' \  
+curl --location 'https://models.kapon.cloud/suno/uploads/audio-url' \
+--header 'Authorization: Bearer $KAPON_API_KEY' \  
 --header 'Content-Type: application/json' \
 --data '{ 
     "url":"http://cdnimg.example.com/ai/2024-06-18/d416d9c3c34eb22c7d8c094831d8dbd0.mp3"
@@ -92,8 +92,8 @@ curl --location 'https://your-newapi-server-address/suno/uploads/audio-url' \
 ### Song Concatenation ❌
 
 ```bash
-curl --location 'https://your-newapi-server-address/suno/submit/concat' \
---header 'Authorization: Bearer $NEWAPI_API_KEY' \
+curl --location 'https://models.kapon.cloud/suno/submit/concat' \
+--header 'Authorization: Bearer $KAPON_API_KEY' \
 --header 'Content-Type: application/json' \  
 --data '{
     "clip_id":"extend song ID", 
@@ -116,8 +116,8 @@ curl --location 'https://your-newapi-server-address/suno/submit/concat' \
 #### Batch Query
 
 ```bash
-curl --location 'https://your-newapi-server-address/suno/fetch' \
---header 'Authorization: Bearer $NEWAPI_API_KEY' \ 
+curl --location 'https://models.kapon.cloud/suno/fetch' \
+--header 'Authorization: Bearer $KAPON_API_KEY' \ 
 --header 'Content-Type: application/json' \
 --data '{
     "ids":["task_id"], 
@@ -172,8 +172,8 @@ curl --location 'https://your-newapi-server-address/suno/fetch' \
 #### Single Query
 
 ```bash
-curl --location 'https://your-newapi-server-address/suno/fetch/{{task_id}}' \ 
---header 'Authorization: Bearer $NEWAPI_API_KEY'
+curl --location 'https://models.kapon.cloud/suno/fetch/{{task_id}}' \ 
+--header 'Authorization: Bearer $KAPON_API_KEY'
 ```
 
 **Response Example:**
@@ -207,7 +207,7 @@ curl --location 'https://your-newapi-server-address/suno/fetch/{{task_id}}' \
 All requests must include authentication information in the request header:
 
 ```
-Authorization: Bearer $NEWAPI_API_KEY
+Authorization: Bearer $KAPON_API_KEY
 ```
 
 ### Endpoints

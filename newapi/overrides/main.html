@@ -5,39 +5,39 @@ This file was automatically generated - do not edit
 {% set is_en = (page is defined) and page and ("en/" in page.file.src_uri) %}
 {% block styles %}
 {{ super() }}
-<link rel="stylesheet" href="{{ 'assets/stylesheets/custom.css' | url }}">
+<link rel="stylesheet" href="{{ 'assets/stylesheets/kapon-theme.css' | url }}">
 {% endblock %}
 {% block announce %}
 {% if is_en %}
-Follow our latest updates on
-<a href="https://github.com/QuantumNous/new-api" target="_blank">
-  <span class="twemoji github">
-    {% include ".icons/fontawesome/brands/github.svg" %}
+Welcome to Kapon AI - Professional AI Model API Service Platform
+<a href="https://models.kapon.cloud" target="_blank">
+  <span class="twemoji globe">
+    {% include ".icons/fontawesome/solid/globe.svg" %}
   </span>
-  <strong>GitHub</strong>
+  <strong>Visit Console</strong>
 </a>
-or join our
-<a href="https://qm.qq.com/q/Y79glR8raU" target="_blank">
-  <span class="twemoji qq">
-    {% include ".icons/fontawesome/brands/qq.svg" %}
+or contact us at
+<a href="mailto:support@kapon.cloud" target="_blank">
+  <span class="twemoji email">
+    {% include ".icons/fontawesome/solid/envelope.svg" %}
   </span>
-  <strong>QQ</strong>
+  <strong>Support</strong>
 </a>
-group chat
 {% else %}
-在 <a href="https://github.com/QuantumNous/new-api" target="_blank">
-  <span class="twemoji github">
-    {% include ".icons/fontawesome/brands/github.svg" %}
+欢迎使用 Kapon AI - 专业的 AI 模型 API 服务平台
+<a href="https://models.kapon.cloud" target="_blank">
+  <span class="twemoji globe">
+    {% include ".icons/fontawesome/solid/globe.svg" %}
   </span>
-  <strong>GitHub</strong>
-</a> 上关注我们的最新动态或加入我们的
-<a href="https://qm.qq.com/q/Y79glR8raU" target="_blank">
-  <span class="twemoji qq">
-    {% include ".icons/fontawesome/brands/qq.svg" %}
-  </span>
-  <strong>QQ</strong>
+  <strong>访问控制台</strong>
 </a>
-交流群
+或联系我们
+<a href="mailto:support@kapon.cloud" target="_blank">
+  <span class="twemoji email">
+    {% include ".icons/fontawesome/solid/envelope.svg" %}
+  </span>
+  <strong>技术支持</strong>
+</a>
 {% endif %}
 {% endblock %}
 {% block scripts %}
@@ -47,7 +47,7 @@ group chat
     {
       "@context": "https://schema.org",
       "@type": "WebSite",
-      "url": "https://github.com/QuantumNous/new-api",
+      "url": "https://models.kapon.cloud",
       "name": "New API - {% if is_en %}Next-Gen LLM Gateway & AI Asset Platform{% else %}新一代大模型网关与AI资产管理系统{% endif %}",
       "description": "{% if is_en %}Unified management of multiple LLM APIs, supporting OpenAI, Anthropic, Google and more providers, with load balancing, billing management and other features{% else %}统一管理多种大模型API，支持OpenAI、Anthropic、Google等多家服务商，提供负载均衡、计费管理等功能{% endif %}",
       "potentialAction": {
@@ -81,4 +81,35 @@ group chat
   ];
 </script>
 {% endif %}
+
+<script>
+  // 处理首页菜单跳转
+  document.addEventListener('DOMContentLoaded', function() {
+    // 查找所有导航链接
+    const navLinks = document.querySelectorAll('.md-nav__link, .md-tabs__link');
+
+    navLinks.forEach(function(link) {
+      // 检查是否是首页链接
+      if (link.textContent.trim() === '首页' || link.textContent.trim() === 'Home') {
+        // 移除原有的 href 并添加点击事件
+        link.removeAttribute('href');
+        link.style.cursor = 'pointer';
+        link.addEventListener('click', function(e) {
+          e.preventDefault();
+          window.open('https://models.kapon.cloud/', '_blank');
+        });
+
+        // 添加外部链接图标
+        if (!link.querySelector('.external-icon')) {
+          const icon = document.createElement('span');
+          icon.className = 'external-icon';
+          icon.innerHTML = ' ↗';
+          icon.style.fontSize = '0.8em';
+          icon.style.opacity = '0.6';
+          link.appendChild(icon);
+        }
+      }
+    });
+  });
+</script>
 {% endblock %}

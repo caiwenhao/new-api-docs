@@ -18,9 +18,9 @@ Given a text prompt and/or input image, the model will generate new images. Open
 
 ```bash
 # Basic image generation
-curl https://your-newapi-server-address/v1/images/generations \
+curl https://models.kapon.cloud/v1/images/generations \
   -H "Content-Type: application/json" \
-  -H "Authorization: Bearer $NEWAPI_API_KEY" \
+  -H "Authorization: Bearer $KAPON_API_KEY" \
   -d '{
     "model": "dall-e-3",
     "prompt": "A cute little sea otter",
@@ -29,9 +29,9 @@ curl https://your-newapi-server-address/v1/images/generations \
   }'
 
 # High-quality image generation
-curl https://your-newapi-server-address/v1/images/generations \
+curl https://models.kapon.cloud/v1/images/generations \
   -H "Content-Type: application/json" \
-  -H "Authorization: Bearer $NEWAPI_API_KEY" \
+  -H "Authorization: Bearer $KAPON_API_KEY" \
   -d '{
     "model": "dall-e-3",
     "prompt": "A cute little sea otter",
@@ -41,9 +41,9 @@ curl https://your-newapi-server-address/v1/images/generations \
   }'
 
 # Using base64 response format
-curl https://your-newapi-server-address/v1/images/generations \
+curl https://models.kapon.cloud/v1/images/generations \
   -H "Content-Type: application/json" \
-  -H "Authorization: Bearer $NEWAPI_API_KEY" \
+  -H "Authorization: Bearer $KAPON_API_KEY" \
   -d '{
     "model": "dall-e-3",
     "prompt": "A cute little sea otter",
@@ -69,8 +69,8 @@ curl https://your-newapi-server-address/v1/images/generations \
 
 ```bash
 # dall-e-2 image editing
-curl https://your-newapi-server-address/v1/images/edits \
-  -H "Authorization: Bearer $NEWAPI_API_KEY" \
+curl https://models.kapon.cloud/v1/images/edits \
+  -H "Authorization: Bearer $KAPON_API_KEY" \
   -F image="@otter.png" \
   -F mask="@mask.png" \
   -F prompt="A cute little sea otter wearing a beret" \
@@ -78,8 +78,8 @@ curl https://your-newapi-server-address/v1/images/edits \
   -F size="1024x1024"
 
 # gpt-image-1 multi-image editing example
-curl https://your-newapi-server-address/v1/images/edits \
-  -H "Authorization: Bearer $NEWAPI_API_KEY" \
+curl https://models.kapon.cloud/v1/images/edits \
+  -H "Authorization: Bearer $KAPON_API_KEY" \
   -F "model=gpt-image-1" \
   -F "image[]=@body-lotion.png" \
   -F "image[]=@bath-bomb.png" \
@@ -130,8 +130,8 @@ curl https://your-newapi-server-address/v1/images/edits \
 ### Generate Image Variations ✅
 
 ```bash
-curl https://your-newapi-server-address/v1/images/variations \
-  -H "Authorization: Bearer $NEWAPI_API_KEY" \
+curl https://models.kapon.cloud/v1/images/variations \
+  -H "Authorization: Bearer $KAPON_API_KEY" \
   -F image="@otter.png" \
   -F n=2 \
   -F size="1024x1024"
@@ -183,10 +183,10 @@ Create variations of a given image.
 Include the following in the request header for API key authentication:
 
 ```
-Authorization: Bearer $NEWAPI_API_KEY
+Authorization: Bearer $KAPON_API_KEY
 ```
 
-Where `$NEWAPI_API_KEY` is your API key.
+Where `$KAPON_API_KEY` is your API key.
 
 ### Request Body Parameters
 

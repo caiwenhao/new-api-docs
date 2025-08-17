@@ -13,10 +13,10 @@ Given a list of structured input messages containing text and/or image content, 
 ### Basic Text Chat ✅
 
 ```bash
-curl https://your-newapi-server-address/v1/messages \
+curl https://models.kapon.cloud/v1/messages \
      --header "anthropic-version: 2023-06-01" \
      --header "content-type: application/json" \
-     --header "x-api-key: $NEWAPI_API_KEY" \
+     --header "x-api-key: $KAPON_API_KEY" \
      --data \
 '{
     "model": "claude-3-5-sonnet-20241022",
@@ -52,10 +52,10 @@ curl https://your-newapi-server-address/v1/messages \
 ### Image Analysis Chat ✅
 
 ```bash
-curl https://your-newapi-server-address/v1/messages \
+curl https://models.kapon.cloud/v1/messages \
      --header "anthropic-version: 2023-06-01" \
      --header "content-type: application/json" \
-     --header "x-api-key: $NEWAPI_API_KEY" \
+     --header "x-api-key: $KAPON_API_KEY" \
      --data \
 '{
     "model": "claude-3-5-sonnet-20241022",
@@ -106,10 +106,10 @@ curl https://your-newapi-server-address/v1/messages \
 ### Tool Calling ✅
 
 ```bash
-curl https://your-newapi-server-address/v1/messages \
+curl https://models.kapon.cloud/v1/messages \
      --header "anthropic-version: 2023-06-01" \
      --header "content-type: application/json" \
-     --header "x-api-key: $NEWAPI_API_KEY" \
+     --header "x-api-key: $KAPON_API_KEY" \
      --data \
 '{
     "model": "claude-3-5-sonnet-20241022",
@@ -165,10 +165,10 @@ curl https://your-newapi-server-address/v1/messages \
 ### Streaming Response ✅
 
 ```bash
-curl https://your-newapi-server-address/v1/messages \
+curl https://models.kapon.cloud/v1/messages \
      --header "anthropic-version: 2023-06-01" \
      --header "content-type: application/json" \
-     --header "x-api-key: $NEWAPI_API_KEY" \
+     --header "x-api-key: $KAPON_API_KEY" \
      --data \
 '{
     "model": "claude-3-5-sonnet-20241022",
@@ -253,10 +253,10 @@ POST /v1/messages
 Include the following in the request headers for API key authentication:
 
 ```
-x-api-key: $NEWAPI_API_KEY
+x-api-key: $KAPON_API_KEY
 ```
 
-Where `$NEWAPI_API_KEY` is your API key. You can obtain an API key from the console, and each key is limited to one workspace.
+Where `$KAPON_API_KEY` is your API key. You can obtain an API key from the console, and each key is limited to one workspace.
 
 ### Request Headers
 

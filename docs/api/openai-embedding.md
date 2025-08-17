@@ -20,9 +20,9 @@
 ### 创建文本嵌入 ✅
 
 ```bash
-curl https://你的newapi服务器地址/v1/embeddings \
+curl https://models.kapon.cloud/v1/embeddings \
   -H "Content-Type: application/json" \
-  -H "Authorization: Bearer $NEWAPI_API_KEY" \
+  -H "Authorization: Bearer $KAPON_API_KEY" \
   -d '{
     "input": "The food was delicious and the waiter...",
     "model": "text-embedding-ada-002",
@@ -58,9 +58,9 @@ curl https://你的newapi服务器地址/v1/embeddings \
 ### 批量创建嵌入 ✅
 
 ```bash
-curl https://你的newapi服务器地址/v1/embeddings \
+curl https://models.kapon.cloud/v1/embeddings \
   -H "Content-Type: application/json" \
-  -H "Authorization: Bearer $NEWAPI_API_KEY" \
+  -H "Authorization: Bearer $KAPON_API_KEY" \
   -d '{
     "input": ["The food was delicious", "The waiter was friendly"],
     "model": "text-embedding-ada-002",
@@ -114,7 +114,7 @@ POST /v1/embeddings
 在请求头中包含以下内容进行 API 密钥认证：
 
 ```
-Authorization: Bearer $NEWAPI_API_KEY
+Authorization: Bearer $KAPON_API_KEY
 ```
 
 其中 `$OPENAI_API_KEY` 是您的 API 密钥。

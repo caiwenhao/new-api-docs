@@ -1,12 +1,12 @@
-site_name: New API
-site_url: https://docs.newapi.pro
-site_author: QuantumNous
-site_description: 新一代大模型网关与AI资产管理系统
+site_name: Kapon AI API 文档
+site_url: https://models.kapon.cloud
+site_author: Kapon AI
+site_description: 专业的 AI 模型 API 服务平台 - 提供高质量的大语言模型接口与 AI 应用开发指南
 
-# Repository
-repo_name: QuantumNous/new-api
-repo_url: https://github.com/QuantumNous/new-api
-edit_uri: https://github.com/QuantumNous/new-api-docs/blob/main/docs/
+# Repository - 移除开源项目引用
+# repo_name:
+# repo_url:
+# edit_uri:
 
 theme:
   name: material
@@ -55,10 +55,10 @@ theme:
   font: false
     # text: Roboto
     # code: Roboto Mono
-  favicon: assets/favicon.ico
-  logo: assets/logo.png
-  icon:
-    repo: fontawesome/brands/github
+  favicon: assets/kapon-favicon.svg
+  logo: assets/kapon-logo.png
+  # icon:
+  #   repo: fontawesome/brands/github
 
 extra:
   alternate:
@@ -69,13 +69,15 @@ extra:
       link: /en/
       lang: en
   social:
-    - icon: fontawesome/brands/github
-      link: https://github.com/QuantumNous/new-api
-    - icon: fontawesome/brands/docker
-      link: https://hub.docker.com/r/calciumion/new-api
-  analytics:
-    provider: google
-    property: G-VHJ4VGJB6N
+    - icon: fontawesome/solid/globe
+      link: https://models.kapon.cloud
+      name: Kapon AI 官网
+    - icon: fontawesome/solid/envelope
+      link: mailto:support@kapon.cloud
+      name: 联系我们
+  # analytics:
+  #   provider: google
+  #   property: G-VHJ4VGJB6N
   consent:
     title: Cookie 同意
     description: >- 
@@ -85,99 +87,56 @@ extra:
   generator: false
 
 nav:
-  - 首页: index.md
-  - 开始使用: getting-started.md
-  - 维基百科:
-    - 📖 维基百科: wiki/index.md
-    - 📚 基本概念:
-      - 项目介绍: wiki/project-introduction.md
-      - 特性说明: wiki/features-introduction.md
-      - 技术架构: wiki/technical-architecture.md
-    - 📝 项目记录:
-      - 更新日志: wiki/changelog.md
-      - 特别鸣谢: wiki/special-thanks.md
-  - 使用指南:
-    - 使用指南: guide/index.md
-    - 🏠 首页: guide/home.md
-    - 🎯 控制台:
-      - 🎮 操练场: guide/console/playground.md
-      - 💬 聊天: guide/console/chat.md
-      - 📊 数据看板: guide/console/dashboard.md
-      - 🔑 API令牌: guide/console/api-token.md
-      - 📝 使用日志: guide/console/usage-log.md
-      - 🎨 绘图日志: guide/console/drawing-log.md
-      - 📝 任务日志: guide/console/task-log.md
-      - 💰 钱包: guide/console/wallet.md
-      - 🔧 个人设置: guide/console/profile.md
-      - 📦 渠道管理: guide/console/channel-management.md
-      - 🎫 兑换码管理: guide/console/redeem-code-management.md
-      - 🧑 用户管理: guide/console/user-management.md
-      - 🔧 系统设置:
-        - 运营设置: guide/console/settings/operation-settings.md
-        - 仪表盘设置: guide/console/settings/dashboard-settings.md
-        - 聊天设置: guide/console/settings/chat-settings.md
-        - 绘图设置: guide/console/settings/drawing-settings.md
-        - 支付设置: guide/console/settings/payment-settings.md
-        - 倍率设置: guide/console/settings/rate-settings.md
-        - 速率限制设置: guide/console/settings/rate-limit-settings.md
-        - 模型相关设置: guide/console/settings/model-settings.md
-        - 系统设置: guide/console/settings/system-settings.md
-        - 其他设置: guide/console/settings/other-settings.md
-    - 💰 定价: guide/pricing.md
-    - 📖 文档: guide/document.md
-    - 📝 关于: guide/about.md
-  - 安装指南:
-    - 🏠 安装指南: installation/index.md
-    - 🔧 部署方式:
-      - Docker 部署: installation/docker-installation.md
-      - Docker Compose 部署: installation/docker-compose-installation.md
-      - 宝塔面板部署: installation/bt-docker-installation.md
-      - 集群部署: installation/cluster-deployment.md
-      - 本地开发部署: installation/local-development.md
-    - ⚙️ 配置与维护:
-      - 系统更新: installation/system-update.md
-      - 环境变量配置: installation/environment-variables.md
-      - Docker Compose 配置文件: installation/docker-compose-yml.md
-  - 接口文档:
-    - 🏠 接口文档: api/index.md
-    - 中继接口:
-      - 💬 聊天（Chat）:
-        - OpenAI 格式（Chat Completions）: api/openai-chat.md
-        - OpenAI 格式（Responses）: api/openai-responses.md
-        - Anthropic 格式（Messages）: api/anthropic-chat.md
-        - Deepseek reasoning 格式（Reasoning Content）: api/deepseek-reasoning-chat.md
-        - 🆕 Google Gemini 格式（Generate Content）: api/google-gemini-chat.md
-      - 🔤 嵌入（Embeddings）:
-        - OpenAI 格式: api/openai-embedding.md
-      - 🔄 重排序（Rerank）:
-        - Jina AI 格式: api/jinaai-rerank.md
-        - Cohere 格式: api/cohere-rerank.md
-        - Xinference 格式: api/xinference-rerank.md
-      - ⚡ 实时对话（Realtime）:
-        - OpenAI 格式: api/openai-realtime.md
-      - 🖼️ 图像（Image）:
-        - OpenAI 格式（Image）: api/openai-image.md
-        - Midjourney 格式（Midjourney Proxy/Midjourney Proxy Plus）: api/midjourney-proxy-image.md
-      - 🔊 音频（Audio）:
-        - OpenAI 格式: api/openai-audio.md
-      - 🎵 音乐（Music）:
-        - Suno API 格式: api/suno-music.md
-      - 🎥 视频（Video）:
-        - 生成视频: api/generate-video.md
-        - 查询视频: api/query-video.md
-    - 前端接口:
-      - 敬请期待: coming-soon.md
-  - AI应用:
-    - 🍒 Cherry Studio - 桌面 AI 客户端: apps/cherry-studio.md
-    - 📦 LangBot - 即时通信机器人开发平台: apps/langbot.md
-    - 📖 FluentRead - 开源翻译插件: apps/fluent-read.md
+  - 首页: index.html
+  - API 文档:
+    - 🏠 API 概览: api/index.md
+    - 🔑 认证方式: api/authentication.md
+    - 💬 对话接口:
+      - OpenAI 格式（Chat Completions）: api/openai-chat.md
+      - OpenAI 格式（Responses）: api/openai-responses.md
+      - Anthropic 格式（Messages）: api/anthropic-chat.md
+      - Deepseek reasoning 格式（Reasoning Content）: api/deepseek-reasoning-chat.md
+      - Google Gemini 格式（Generate Content）: api/google-gemini-chat.md
+    - 🔤 嵌入接口:
+      - OpenAI 格式: api/openai-embedding.md
+    - 🔄 重排序接口:
+      - Jina AI 格式: api/jinaai-rerank.md
+      - Cohere 格式: api/cohere-rerank.md
+      - Xinference 格式: api/xinference-rerank.md
+    - ⚡ 实时对话:
+      - OpenAI 格式: api/openai-realtime.md
+    - 🖼️ 图像生成:
+      - OpenAI 格式（Image）: api/openai-image.md
+      - Midjourney 格式: api/midjourney-proxy-image.md
+    - 🔊 音频处理:
+      - OpenAI 格式: api/openai-audio.md
+    - 🎵 音乐生成:
+      - Suno API 格式: api/suno-music.md
+    - 🎥 视频生成:
+      - 生成视频: api/generate-video.md
+      - 查询视频: api/query-video.md
+  - AI 应用指南:
+    - 🏠 应用开发概览: apps/index.md
+    - 🚀 快速集成:
+      - Python SDK: apps/python-sdk.md
+      - JavaScript SDK: apps/javascript-sdk.md
+      - cURL 示例: apps/curl-examples.md
+    - 💡 最佳实践:
+      - 提示词工程: apps/prompt-engineering.md
+      - 错误处理: apps/error-handling.md
+      - 性能优化: apps/performance-optimization.md
+    - 🛠️ 开发工具:
+      - API 测试工具: apps/api-testing.md
+      - 代码生成器: apps/code-generator.md
+    - 📚 应用案例:
+      - 聊天机器人: apps/chatbot-example.md
+      - 内容生成: apps/content-generation.md
+      - 智能翻译: apps/translation-example.md
   - 帮助支持:
-    - 🏠 帮助支持: support/index.md
-    - 🌐 社区交流: support/community-interaction.md
-    - 🐛 反馈问题: support/feedback-issues.md
+    - 🏠 帮助中心: support/index.md
     - ❓ 常见问题: support/faq.md
-    - ☕ 请我们喝咖啡: support/buy-us-a-coffee.md
-  - 商务合作: business-cooperation.md
+    - 📞 联系我们: support/contact.md
+    - 💰 定价方案: support/pricing.md
 
 plugins:
   - search:
@@ -193,102 +152,60 @@ plugins:
           name: 简体中文
           build: true
           default: true
-          site_name: "New API"
+          site_name: "Kapon AI"
         - locale: en
           name: English
           build: true
-          site_name: "New API"
+          site_name: "Kapon AI API Documentation"
           nav_translations:
             首页: Home
-            开始使用: "Getting Started"
-            维基百科: Wiki
-            "📖 维基百科": Wiki
-            "📚 基本概念": "Basic Concepts"
-            项目介绍: "Project Introduction"
-            特性说明: "Feature Overview"
-            技术架构: "Technical Architecture"
-            "📝 项目记录": "Project Records"
-            更新日志: Changelog
-            特别鸣谢: "Special Thanks"
-            安装指南: "Installation Guide"
-            "🏠 安装指南": "Installation Guide"
-            "🔧 部署方式": "Deployment Methods"
-            "Docker 部署": "Docker Installation"
-            "Docker Compose 部署": "Docker Compose Installation"
-            "宝塔面板部署": "BT Panel Installation"
-            集群部署: "Cluster Deployment"
-            本地开发部署: "Local Development"
-            "⚙️ 配置与维护": "Config & Maintenance"
-            系统更新: "System Update"
-            环境变量配置: "Environment Variables"
-            "Docker Compose 配置文件": "Docker Compose Configuration"
-            接口文档: "API Reference"
-            "🏠 接口文档": Overview
-            中继接口: "Proxy APIs"
-            "💬 聊天（Chat）": "Chat APIs"
+            "API 文档": "API Documentation"
+            "🏠 API 概览": "API Overview"
+            "🔑 认证方式": "Authentication"
+            "💬 对话接口": "Chat APIs"
             "OpenAI 格式（Chat Completions）": "OpenAI Chat Completions"
             "OpenAI 格式（Responses）": "OpenAI Responses"
-            "Anthropic 格式（Messages）": "Anthropic Chat Messages"
-            "Deepseek reasoning 格式（Reasoning Content）": "Deepseek Reasoning Chat"
-            "🆕 Google Gemini 格式（Generate Content）": "Google Gemini Chat"
-            "🔤 嵌入（Embeddings）": Embeddings
-            "OpenAI 格式": "OpenAI"
-            "🔄 重排序（Rerank）": Rerank
-            "Jina AI 格式": "Jina AI Rerank"
-            "Cohere 格式": "Cohere Rerank"
-            "Xinference 格式": "Xinference Rerank"
-            "⚡ 实时对话（Realtime）": Realtime
-            "🖼️ 图像（Image）": Image
+            "Anthropic 格式（Messages）": "Anthropic Messages"
+            "Deepseek reasoning 格式（Reasoning Content）": "Deepseek Reasoning"
+            "Google Gemini 格式（Generate Content）": "Google Gemini"
+            "🔤 嵌入接口": "Embedding APIs"
+            "OpenAI 格式": "OpenAI Format"
+            "🔄 重排序接口": "Rerank APIs"
+            "Jina AI 格式": "Jina AI Format"
+            "Cohere 格式": "Cohere Format"
+            "Xinference 格式": "Xinference Format"
+            "⚡ 实时对话": "Realtime APIs"
+            "🖼️ 图像生成": "Image Generation"
             "OpenAI 格式（Image）": "OpenAI Image"
-            "Midjourney 格式（Midjourney Proxy/Midjourney Proxy Plus）": "Midjourney Proxy Image"
-            "🔊 音频（Audio）": Audio
-            "🎵 音乐（Music）": Music
-            Suno API 格式: "Suno Music"
-            "🎥 视频（Video）": Video
+            "Midjourney 格式": "Midjourney Format"
+            "🔊 音频处理": "Audio Processing"
+            "🎵 音乐生成": "Music Generation"
+            "Suno API 格式": "Suno API Format"
+            "🎥 视频生成": "Video Generation"
             "生成视频": "Generate Video"
             "查询视频": "Query Video"
-            前端接口: "Frontend APIs"
-            敬请期待: "Coming Soon"
-            AI应用: "AI Applications"
-            "🍒 Cherry Studio - 桌面 AI 客户端": "🍒 Cherry Studio - Desktop AI Client"
-            "📦 LangBot - 即时通信机器人开发平台": "📦 LangBot - IM Bot Development Platform"
-            "📖 FluentRead - 开源翻译插件": "📖 FluentRead - Open Source Translation Plugin"
-            帮助支持: Support
-            "🏠 帮助支持": "Support Home"
-            "🌐 社区交流": Community
-            "🐛 反馈问题": "Feedback & Issues"
-            "❓ 常见问题": FAQ
-            "☕ 请我们喝咖啡": "Buy Us a Coffee"
-            "商务合作": "Contact Us"
-            "使用指南": Guide
-            "🏠 首页": Home
-            "🎯 控制台": Console
-            "🎮 操练场": Playground
-            "💬 聊天": Chat
-            "📊 数据看板": Dashboard
-            "🔑 API令牌": API Token
-            "📝 使用日志": Usage Log
-            "🎨 绘图日志": Drawing Log
-            "📝 任务日志": Task Log
-            "💰 钱包": Wallet
-            "🔧 个人设置": Profile
-            "📦 渠道管理": Channel Management
-            "🎫 兑换码管理": Redeem Code Management
-            "🧑 用户管理": User Management
-            "🔧 系统设置": System Settings
-            "运营设置": Operation Settings
-            "仪表盘设置": Dashboard Settings
-            "聊天设置": Chat Settings
-            "绘图设置": Drawing Settings
-            "支付设置": Payment Settings
-            "倍率设置": Rate Settings
-            "速率限制设置": Rate Limit Settings
-            "模型相关设置": Model Settings
-            "系统设置": System Settings
-            "其他设置": Other Settings
-            "💰 定价": Pricing
-            "📖 文档": Documentation
-            "📝 关于": About
+            "AI 应用指南": "AI Application Guide"
+            "🏠 应用开发概览": "Development Overview"
+            "🚀 快速集成": "Quick Integration"
+            "Python SDK": "Python SDK"
+            "JavaScript SDK": "JavaScript SDK"
+            "cURL 示例": "cURL Examples"
+            "💡 最佳实践": "Best Practices"
+            "提示词工程": "Prompt Engineering"
+            "错误处理": "Error Handling"
+            "性能优化": "Performance Optimization"
+            "🛠️ 开发工具": "Development Tools"
+            "API 测试工具": "API Testing Tools"
+            "代码生成器": "Code Generator"
+            "📚 应用案例": "Use Cases"
+            "聊天机器人": "Chatbot Example"
+            "内容生成": "Content Generation"
+            "智能翻译": "Translation Example"
+            "帮助支持": "Support"
+            "🏠 帮助中心": "Help Center"
+            "❓ 常见问题": "FAQ"
+            "📞 联系我们": "Contact Us"
+            "💰 定价方案": "Pricing Plans"
 
 markdown_extensions:
   - abbr
@@ -327,4 +244,4 @@ markdown_extensions:
       custom_checkbox: true
   - pymdownx.tilde
 
-copyright: Copyright &copy; 2025 Quantum Nous. All Rights Reserved.
+copyright: "&copy; 2024 Kapon. 真源直连，智启未来"

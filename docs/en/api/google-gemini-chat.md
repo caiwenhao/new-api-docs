@@ -12,7 +12,7 @@ Google Gemini API supports generating content using images, audio, code, tools, 
 ### Basic Text Chat ✅
 
 ```bash
-curl "https://your-newapi-server-address/v1beta/models/gemini-2.0-flash:generateContent?key=$NEWAPI_API_KEY" \
+curl "https://models.kapon.cloud/v1beta/models/gemini-2.0-flash:generateContent?key=$KAPON_API_KEY" \
     -H 'Content-Type: application/json' \
     -X POST \
     -d '{
@@ -50,7 +50,7 @@ cat > "$TEMP_JSON" << EOF
 }
 EOF
 
-curl "https://your-newapi-server-address/v1beta/models/gemini-2.0-flash:generateContent?key=$NEWAPI_API_KEY" \
+curl "https://models.kapon.cloud/v1beta/models/gemini-2.0-flash:generateContent?key=$KAPON_API_KEY" \
     -H 'Content-Type: application/json' \
     -X POST \
     -d "@$TEMP_JSON" 2> /dev/null
@@ -90,7 +90,7 @@ cat > tools.json << EOF
 } 
 EOF
 
-curl "https://your-newapi-server-address/v1beta/models/gemini-2.0-flash:generateContent?key=$NEWAPI_API_KEY" \
+curl "https://models.kapon.cloud/v1beta/models/gemini-2.0-flash:generateContent?key=$KAPON_API_KEY" \
   -H 'Content-Type: application/json' \
   -d @<(echo '
   {
@@ -118,7 +118,7 @@ curl "https://your-newapi-server-address/v1beta/models/gemini-2.0-flash:generate
 ### JSON Schema Response ✅
 
 ```bash
-curl "https://your-newapi-server-address/v1beta/models/gemini-2.0-flash:generateContent?key=$NEWAPI_API_KEY" \
+curl "https://models.kapon.cloud/v1beta/models/gemini-2.0-flash:generateContent?key=$KAPON_API_KEY" \
 -H 'Content-Type: application/json' \
 -d '{
     "contents": [{
@@ -156,7 +156,7 @@ else
 fi
 AUDIO_B64=$(base64 $B64FLAGS "$AUDIO_PATH")
 
-curl "https://your-newapi-server-address/v1beta/models/gemini-2.0-flash:generateContent?key=$NEWAPI_API_KEY" \
+curl "https://models.kapon.cloud/v1beta/models/gemini-2.0-flash:generateContent?key=$KAPON_API_KEY" \
   -H 'Content-Type: application/json' \
   -X POST \
   -d '{
@@ -184,7 +184,7 @@ else
 fi
 VIDEO_B64=$(base64 $B64FLAGS "$VIDEO_PATH")
 
-curl "https://your-newapi-server-address/v1beta/models/gemini-2.0-flash:generateContent?key=$NEWAPI_API_KEY" \
+curl "https://models.kapon.cloud/v1beta/models/gemini-2.0-flash:generateContent?key=$KAPON_API_KEY" \
   -H 'Content-Type: application/json' \
   -X POST \
   -d '{
@@ -214,7 +214,7 @@ PDF_B64=$(base64 $B64FLAGS "$PDF_PATH")
 
 echo $MIME_TYPE
 
-curl "https://your-newapi-server-address/v1beta/models/gemini-2.0-flash:generateContent?key=$NEWAPI_API_KEY" \
+curl "https://models.kapon.cloud/v1beta/models/gemini-2.0-flash:generateContent?key=$KAPON_API_KEY" \
   -H 'Content-Type: application/json' \
   -X POST \
   -d '{
@@ -230,7 +230,7 @@ curl "https://your-newapi-server-address/v1beta/models/gemini-2.0-flash:generate
 ### Chat Dialog ✅
 
 ```bash
-curl https://your-newapi-server-address/v1beta/models/gemini-2.0-flash:generateContent?key=$NEWAPI_API_KEY \
+curl https://models.kapon.cloud/v1beta/models/gemini-2.0-flash:generateContent?key=$KAPON_API_KEY \
     -H 'Content-Type: application/json' \
     -X POST \
     -d '{
@@ -251,7 +251,7 @@ curl https://your-newapi-server-address/v1beta/models/gemini-2.0-flash:generateC
 ### Streaming Response ✅
 
 ```bash
-curl "https://your-newapi-server-address/v1beta/models/gemini-2.0-flash:streamGenerateContent?alt=sse&key=$NEWAPI_API_KEY" \
+curl "https://models.kapon.cloud/v1beta/models/gemini-2.0-flash:streamGenerateContent?alt=sse&key=$KAPON_API_KEY" \
     -H 'Content-Type: application/json' \
     --no-buffer \
     -d '{
@@ -264,7 +264,7 @@ curl "https://your-newapi-server-address/v1beta/models/gemini-2.0-flash:streamGe
 ### Code Execution ✅
 
 ```bash
-curl "https://your-newapi-server-address/v1beta/models/gemini-2.0-flash:generateContent?key=$NEWAPI_API_KEY" \
+curl "https://models.kapon.cloud/v1beta/models/gemini-2.0-flash:generateContent?key=$KAPON_API_KEY" \
     -H 'Content-Type: application/json' \
     -X POST \
     -d '{
@@ -280,7 +280,7 @@ curl "https://your-newapi-server-address/v1beta/models/gemini-2.0-flash:generate
 ### Generation Config ✅
 
 ```bash
-curl https://your-newapi-server-address/v1beta/models/gemini-2.0-flash:generateContent?key=$NEWAPI_API_KEY \
+curl https://models.kapon.cloud/v1beta/models/gemini-2.0-flash:generateContent?key=$KAPON_API_KEY \
     -H 'Content-Type: application/json' \
     -X POST \
     -d '{
@@ -313,7 +313,7 @@ echo '{
         "parts":[{
             "text": "'I support Martians Soccer Club and I think Jupiterians Football Club sucks! Write a ironic phrase about them.'"}]}]}' > request.json
 
-curl "https://your-newapi-server-address/v1beta/models/gemini-2.0-flash:generateContent?key=$NEWAPI_API_KEY" \
+curl "https://models.kapon.cloud/v1beta/models/gemini-2.0-flash:generateContent?key=$KAPON_API_KEY" \
     -H 'Content-Type: application/json' \
     -X POST \
     -d @request.json 2> /dev/null
@@ -322,7 +322,7 @@ curl "https://your-newapi-server-address/v1beta/models/gemini-2.0-flash:generate
 ### System Instruction ✅
 
 ```bash
-curl "https://your-newapi-server-address/v1beta/models/gemini-2.0-flash:generateContent?key=$NEWAPI_API_KEY" \
+curl "https://models.kapon.cloud/v1beta/models/gemini-2.0-flash:generateContent?key=$KAPON_API_KEY" \
 -H 'Content-Type: application/json' \
 -d '{ "system_instruction": {
     "parts":
@@ -338,12 +338,12 @@ curl "https://your-newapi-server-address/v1beta/models/gemini-2.0-flash:generate
 
 #### Generate Content
 ```
-POST https://your-newapi-server-address/v1beta/{model=models/*}:generateContent
+POST https://models.kapon.cloud/v1beta/{model=models/*}:generateContent
 ```
 
 #### Stream Generate Content
 ```
-POST https://your-newapi-server-address/v1beta/{model=models/*}:streamGenerateContent
+POST https://models.kapon.cloud/v1beta/{model=models/*}:streamGenerateContent
 ```
 
 ### Authentication Method
@@ -351,10 +351,10 @@ POST https://your-newapi-server-address/v1beta/{model=models/*}:streamGenerateCo
 Include API key in the request URL:
 
 ```
-?key=$NEWAPI_API_KEY
+?key=$KAPON_API_KEY
 ```
 
-Where `$NEWAPI_API_KEY` is your Google AI API key.
+Where `$KAPON_API_KEY` is your Google AI API key.
 
 ### Path Parameters
 
