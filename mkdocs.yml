@@ -92,26 +92,26 @@ nav:
     - 🏠 API 概览: api/index.md
     - 🔑 认证方式: api/authentication.md
     - 💬 对话接口:
-      - OpenAI 格式（Chat Completions）: api/openai-chat.md
-      - OpenAI 格式（Responses）: api/openai-responses.md
-      - Anthropic 格式（Messages）: api/anthropic-chat.md
-      - Deepseek reasoning 格式（Reasoning Content）: api/deepseek-reasoning-chat.md
-      - Google Gemini 格式（Generate Content）: api/google-gemini-chat.md
+      - OpenAI Chat: api/openai-chat.md
+      - OpenAI Responses: api/openai-responses.md
+      - Anthropic Messages: api/anthropic-chat.md
+      - Deepseek Reasoning: api/deepseek-reasoning-chat.md
+      - Google Gemini: api/google-gemini-chat.md
     - 🔤 嵌入接口:
-      - OpenAI 格式: api/openai-embedding.md
+      - OpenAI Embeddings: api/openai-embedding.md
     - 🔄 重排序接口:
-      - Jina AI 格式: api/jinaai-rerank.md
-      - Cohere 格式: api/cohere-rerank.md
-      - Xinference 格式: api/xinference-rerank.md
+      - Jina AI Rerank: api/jinaai-rerank.md
+      - Cohere Rerank: api/cohere-rerank.md
+      - Xinference Rerank: api/xinference-rerank.md
     - ⚡ 实时对话:
-      - OpenAI 格式: api/openai-realtime.md
+      - OpenAI Realtime: api/openai-realtime.md
     - 🖼️ 图像生成:
-      - OpenAI 格式（Image）: api/openai-image.md
-      - Midjourney 格式: api/midjourney-proxy-image.md
+      - OpenAI Image: api/openai-image.md
+      - Midjourney Proxy: api/midjourney-proxy-image.md
     - 🔊 音频处理:
-      - OpenAI 格式: api/openai-audio.md
+      - OpenAI Audio: api/openai-audio.md
     - 🎵 音乐生成:
-      - Suno API 格式: api/suno-music.md
+      - Suno Music: api/suno-music.md
     - 🎥 视频生成:
       - 生成视频: api/generate-video.md
       - 查询视频: api/query-video.md
@@ -124,14 +124,6 @@ nav:
     - 💡 最佳实践:
       - 提示词工程: apps/prompt-engineering.md
       - 错误处理: apps/error-handling.md
-      - 性能优化: apps/performance-optimization.md
-    - 🛠️ 开发工具:
-      - API 测试工具: apps/api-testing.md
-      - 代码生成器: apps/code-generator.md
-    - 📚 应用案例:
-      - 聊天机器人: apps/chatbot-example.md
-      - 内容生成: apps/content-generation.md
-      - 智能翻译: apps/translation-example.md
   - 帮助支持:
     - 🏠 帮助中心: support/index.md
     - ❓ 常见问题: support/faq.md
@@ -163,24 +155,26 @@ plugins:
             "🏠 API 概览": "API Overview"
             "🔑 认证方式": "Authentication"
             "💬 对话接口": "Chat APIs"
-            "OpenAI 格式（Chat Completions）": "OpenAI Chat Completions"
-            "OpenAI 格式（Responses）": "OpenAI Responses"
-            "Anthropic 格式（Messages）": "Anthropic Messages"
-            "Deepseek reasoning 格式（Reasoning Content）": "Deepseek Reasoning"
-            "Google Gemini 格式（Generate Content）": "Google Gemini"
+            "OpenAI Chat": "OpenAI Chat"
+            "OpenAI Responses": "OpenAI Responses"
+            "Anthropic Messages": "Anthropic Messages"
+            "Deepseek Reasoning": "Deepseek Reasoning"
+            "Google Gemini": "Google Gemini"
             "🔤 嵌入接口": "Embedding APIs"
-            "OpenAI 格式": "OpenAI Format"
+            "OpenAI Embeddings": "OpenAI Embeddings"
             "🔄 重排序接口": "Rerank APIs"
-            "Jina AI 格式": "Jina AI Format"
-            "Cohere 格式": "Cohere Format"
-            "Xinference 格式": "Xinference Format"
+            "Jina AI Rerank": "Jina AI Rerank"
+            "Cohere Rerank": "Cohere Rerank"
+            "Xinference Rerank": "Xinference Rerank"
             "⚡ 实时对话": "Realtime APIs"
+            "OpenAI Realtime": "OpenAI Realtime"
             "🖼️ 图像生成": "Image Generation"
-            "OpenAI 格式（Image）": "OpenAI Image"
-            "Midjourney 格式": "Midjourney Format"
+            "OpenAI Image": "OpenAI Image"
+            "Midjourney Proxy": "Midjourney Proxy"
             "🔊 音频处理": "Audio Processing"
+            "OpenAI Audio": "OpenAI Audio"
             "🎵 音乐生成": "Music Generation"
-            "Suno API 格式": "Suno API Format"
+            "Suno Music": "Suno Music"
             "🎥 视频生成": "Video Generation"
             "生成视频": "Generate Video"
             "查询视频": "Query Video"
@@ -193,14 +187,7 @@ plugins:
             "💡 最佳实践": "Best Practices"
             "提示词工程": "Prompt Engineering"
             "错误处理": "Error Handling"
-            "性能优化": "Performance Optimization"
-            "🛠️ 开发工具": "Development Tools"
-            "API 测试工具": "API Testing Tools"
-            "代码生成器": "Code Generator"
-            "📚 应用案例": "Use Cases"
-            "聊天机器人": "Chatbot Example"
-            "内容生成": "Content Generation"
-            "智能翻译": "Translation Example"
+
             "帮助支持": "Support"
             "🏠 帮助中心": "Help Center"
             "❓ 常见问题": "FAQ"
@@ -216,6 +203,7 @@ markdown_extensions:
   - md_in_html
   - toc:
       permalink: true
+      toc_depth: 3
   - pymdownx.arithmatex:
       generic: true
   - pymdownx.betterem:

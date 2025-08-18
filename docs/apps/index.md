@@ -56,15 +56,11 @@
 
 ## 🛠️ 开发工具
 
-### API 测试工具
-- [Postman 集合](api-testing.md#postman) - 预配置的 API 测试集合
-- [在线测试工具](api-testing.md#online) - 浏览器中直接测试 API
-- [命令行工具](api-testing.md#cli) - 批量测试和自动化
+我们提供了丰富的开发工具和资源来帮助您快速集成和测试 API：
 
-### 代码生成器
-- [SDK 代码生成](code-generator.md#sdk) - 自动生成 SDK 调用代码
-- [示例代码库](code-generator.md#examples) - 常见场景的示例代码
-- [配置生成器](code-generator.md#config) - 快速生成配置文件
+- [cURL 示例](curl-examples.md) - 完整的命令行测试示例集合
+- [Python SDK](python-sdk.md) - Python 开发工具包和示例
+- [JavaScript SDK](javascript-sdk.md) - JavaScript 开发工具包和示例
 
 ## 📚 学习资源
 
@@ -129,11 +125,6 @@ response = client.chat.completions.create(
 - 📧 邮箱：support@kapon.cloud
 - 💬 在线客服：[https://models.kapon.cloud/support](https://models.kapon.cloud/support)
 - 📖 文档中心：[https://models.kapon.cloud/docs](https://models.kapon.cloud/docs)
-
-### 社区资源
-- 🌐 开发者社区：[https://community.kapon.cloud](https://community.kapon.cloud)
-- 📺 视频教程：[https://learn.kapon.cloud](https://learn.kapon.cloud)
-- 📝 博客文章：[https://blog.kapon.cloud](https://blog.kapon.cloud)
 
 ---
 
