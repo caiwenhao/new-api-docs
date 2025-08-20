@@ -127,7 +127,6 @@ nav:
   - 帮助支持:
     - 🏠 帮助中心: support/index.md
     - ❓ 常见问题: support/faq.md
-    - 📞 联系我们: support/contact.md
     - 💰 定价方案: support/pricing.md
 
 plugins:
@@ -191,7 +190,6 @@ plugins:
             "帮助支持": "Support"
             "🏠 帮助中心": "Help Center"
             "❓ 常见问题": "FAQ"
-            "📞 联系我们": "Contact Us"
             "💰 定价方案": "Pricing Plans"
 
 markdown_extensions:

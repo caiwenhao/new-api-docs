@@ -123,7 +123,6 @@ response = client.chat.completions.create(
 
 ### 技术支持
 - 📧 邮箱：support@kapon.cloud
-- 💬 在线客服：[https://models.kapon.cloud/support](https://models.kapon.cloud/support)
 - 📖 文档中心：[https://models.kapon.cloud/docs](https://models.kapon.cloud/docs)
 
 ---

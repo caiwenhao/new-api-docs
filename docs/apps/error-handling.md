@@ -415,4 +415,4 @@ else:
 - [Python SDK](python-sdk.md)
 - [JavaScript SDK](javascript-sdk.md)
 - [性能优化指南](performance-optimization.md)
-- [技术支持](../support/contact.md)
+- [技术支持](../support/index.md)
