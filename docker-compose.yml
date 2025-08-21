@@ -1,7 +1,9 @@
 services:
   # MkDocs主服务
   mkdocs:
-    image: squidfunk/mkdocs-material:latest  # 使用官方镜像
+    build:
+      context: .
+      dockerfile: Dockerfile
     container_name: mkdocs
     restart: unless-stopped
     ports:
