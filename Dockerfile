@@ -1,21 +1,26 @@
-# 基于官方 MkDocs Material 镜像
+# Base on official MkDocs Material image
 FROM squidfunk/mkdocs-material:latest
 
-# 设置工作目录
+# Set timezone and working directory
+ENV TZ=Asia/Shanghai
 WORKDIR /docs
 
-# 安装项目所需的额外依赖
+# Install extra MkDocs plugins/extensions used by this project
+# - mkdocs-static-i18n[material] for multi-language support
+# - mkdocs-git-revision-date-localized-plugin for last-updated stamps
+# - mkdocs-glightbox for image lightbox
+# - mkdocs-minify-plugin to minify HTML
 RUN pip install --no-cache-dir \
-    mkdocs-static-i18n[material]
+      "mkdocs-static-i18n[material]" \
+      mkdocs-git-revision-date-localized-plugin \
+      mkdocs-glightbox \
+      mkdocs-minify-plugin
 
-# 复制项目文件
+# Copy repo (optional when using bind mount in docker-compose)
+# Keeping this allows the image to run standalone without a mount.
 COPY . /docs
 
-# 确保脚本有执行权限
-RUN chmod +x /docs/dev-server.sh
-
-# 暴露端口
-EXPOSE 8000
-
-# 默认命令
+# Default entrypoint delegates to our dev helper (overridable by docker-compose)
+ENTRYPOINT ["/bin/sh", "-c"]
 CMD ["./dev-server.sh"]
+

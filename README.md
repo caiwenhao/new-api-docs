@@ -21,7 +21,9 @@ mkdocs serve
 OpenAPI 参考文档页面：`/api/reference/`（内嵌 Redoc，规范文件位于 `docs/openapi/openapi.yaml`）
 
 ### 3️⃣ 可选：Docker Compose 方式
+使用自定义 `Dockerfile`（已预装所需插件），首次运行建议先构建：
 ```bash
+docker compose build mkdocs
 docker compose up
 ```
 访问: http://127.0.0.1:2004

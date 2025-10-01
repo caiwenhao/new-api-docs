@@ -1,48 +1,12 @@
-# Git 相关
-.git
-.gitignore
-
-# Python 相关
-__pycache__
+# Speed up Docker builds and avoid leaking local state
+.git/
+.venv/
+site/
+__pycache__/
 *.pyc
 *.pyo
 *.pyd
-.Python
-env
-pip-log.txt
-pip-delete-this-directory.txt
-.tox
-.coverage
-.coverage.*
-.cache
-nosetests.xml
-coverage.xml
-*.cover
-*.log
-.git
-.mypy_cache
-.pytest_cache
-.hypothesis
-
-# 开发工具
-.vscode
-.idea
-*.swp
-*.swo
-*~
-
-# 系统文件
-.DS_Store
-Thumbs.db
-
-# 构建产物
-site/
-.yoyo/
-
-# 依赖管理
 node_modules/
-uv.lock
+.DS_Store
+*.log
 
-# 临时文件
-*.tmp
-*.temp
