@@ -124,6 +124,11 @@ nav:
     - 💡 最佳实践:
       - 提示词工程: apps/prompt-engineering.md
       - 错误处理: apps/error-handling.md
+      - 性能优化: apps/performance-optimization.md
+    - 🧩 实战案例:
+      - 聊天机器人: apps/chatbot-example.md
+      - 内容生成器: apps/content-generation.md
+      - 智能翻译: apps/translation-example.md
   - 帮助支持:
     - 🏠 帮助中心: support/index.md
     - ❓ 常见问题: support/faq.md
