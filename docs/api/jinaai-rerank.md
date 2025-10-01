@@ -4,7 +4,7 @@
     [Jina AI Rerank](https://jina.ai/reranker)
 
 !!! note "标准格式"
-    在New API中，Jina AI的rerank格式被采用为标准格式。所有其他供应商（如Xinference、Cohere等）的rerank响应都会被格式化为Jina AI的格式，以提供统一的开发体验。
+    在本平台中，Jina AI 的 rerank 格式被采用为标准格式。所有其他供应商（如 Xinference、Cohere 等）的 rerank 响应都会被格式化为 Jina AI 的格式，以提供统一的开发体验。
 
 ## 📝 简介
 

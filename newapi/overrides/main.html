@@ -3,6 +3,16 @@ This file was automatically generated - do not edit
 -#}
 {% extends "base.html" %}
 {% set is_en = (page is defined) and page and ("en/" in page.file.src_uri) %}
+{% block extrahead %}
+  {{ super() }}
+  <meta name="description" content="{{ config.site_description }}" />
+  <link rel="canonical" href="{{ page.canonical_url | d(config.site_url) }}" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="{{ page.title or config.site_name }}" />
+  <meta property="og:description" content="{{ config.site_description }}" />
+  <meta property="og:url" content="{{ page.canonical_url | d(config.site_url) }}" />
+  <meta property="og:image" content="{{ 'assets/kapon-logo.png' | url }}" />
+{% endblock %}
 {% block styles %}
 {{ super() }}
 <link rel="stylesheet" href="{{ 'assets/stylesheets/kapon-theme.css' | url }}">
@@ -48,13 +58,13 @@ or contact us at
       "@context": "https://schema.org",
       "@type": "WebSite",
       "url": "https://models.kapon.cloud",
-      "name": "New API - {% if is_en %}Next-Gen LLM Gateway & AI Asset Platform{% else %}新一代大模型网关与AI资产管理系统{% endif %}",
+      "name": "Kapon AI - {% if is_en %}Next-Gen LLM Gateway & AI Asset Platform{% else %}新一代大模型网关与 AI 资产管理系统{% endif %}",
       "description": "{% if is_en %}Unified management of multiple LLM APIs, supporting OpenAI, Anthropic, Google and more providers, with load balancing, billing management and other features{% else %}统一管理多种大模型API，支持OpenAI、Anthropic、Google等多家服务商，提供负载均衡、计费管理等功能{% endif %}",
       "potentialAction": {
         "@type": "SearchAction",
         "target": {
           "@type": "EntryPoint",
-          "urlTemplate": "https://github.com/QuantumNous/new-api?q={search_term_string}"
+          "urlTemplate": "https://models.kapon.cloud/"
         },
         "query-input": "required name=search_term_string"
       }
@@ -74,7 +84,7 @@ or contact us at
 <script>
   window.typewriterTexts = [
     "构筑下一代 AI 应用基座",
-    "New API Docs 由大模型驱动",
+    "Kapon AI 文档由大模型驱动",
     "打造智能应用新基础",
     "连接海量模型资源",
     "简化 AI 开发流程"
@@ -82,34 +92,5 @@ or contact us at
 </script>
 {% endif %}
 
-<script>
-  // 处理首页菜单跳转
-  document.addEventListener('DOMContentLoaded', function() {
-    // 查找所有导航链接
-    const navLinks = document.querySelectorAll('.md-nav__link, .md-tabs__link');
-
-    navLinks.forEach(function(link) {
-      // 检查是否是首页链接
-      if (link.textContent.trim() === '首页' || link.textContent.trim() === 'Home') {
-        // 移除原有的 href 并添加点击事件
-        link.removeAttribute('href');
-        link.style.cursor = 'pointer';
-        link.addEventListener('click', function(e) {
-          e.preventDefault();
-          window.open('https://models.kapon.cloud/', '_blank');
-        });
-
-        // 添加外部链接图标
-        if (!link.querySelector('.external-icon')) {
-          const icon = document.createElement('span');
-          icon.className = 'external-icon';
-          icon.innerHTML = ' ↗';
-          icon.style.fontSize = '0.8em';
-          icon.style.opacity = '0.6';
-          link.appendChild(icon);
-        }
-      }
-    });
-  });
-</script>
+{# Remove Home link hijack; we now expose Console as a dedicated nav item #}
 {% endblock %}

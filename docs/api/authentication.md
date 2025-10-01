@@ -28,15 +28,54 @@ Authorization: Bearer YOUR_API_KEY
 
 ### 示例
 
-```bash
-curl https://models.kapon.cloud/v1/chat/completions \
-  -H "Content-Type: application/json" \
-  -H "Authorization: Bearer $KAPON_API_KEY" \
-  -d '{
-    "model": "gpt-4",
-    "messages": [{"role": "user", "content": "Hello!"}]
-  }'
-```
+=== "Python"
+
+    ```python
+    from openai import OpenAI
+
+    client = OpenAI(
+        api_key="YOUR_API_KEY",
+        base_url="https://models.kapon.cloud/v1"
+    )
+
+    resp = client.chat.completions.create(
+        model="gpt-4",
+        messages=[{"role": "user", "content": "Hello!"}],
+        temperature=0.7,
+    )
+    print(resp.choices[0].message.content)
+    ```
+
+=== "JavaScript"
+
+    ```js
+    import OpenAI from "openai";
+
+    const client = new OpenAI({
+      apiKey: process.env.KAPON_API_KEY,
+      baseURL: "https://models.kapon.cloud/v1"
+    });
+
+    const resp = await client.chat.completions.create({
+      model: "gpt-4",
+      messages: [{ role: "user", content: "Hello!" }],
+      temperature: 0.7
+    });
+    console.log(resp.choices[0].message.content);
+    ```
+
+=== "cURL"
+
+    ```bash
+    curl https://models.kapon.cloud/v1/chat/completions \
+      -H "Content-Type: application/json" \
+      -H "Authorization: Bearer $KAPON_API_KEY" \
+      -d '{
+        "model": "gpt-4",
+        "messages": [{"role": "user", "content": "Hello!"}],
+        "temperature": 0.7
+      }'
+    ```
 
 ### 环境变量设置
 

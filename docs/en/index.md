@@ -1,9 +1,9 @@
 ---
 template: home.html
-title: New API
+title: Kapon AI
 social:
   cards_layout_options:
     title: Next-Gen LLM Gateway & AI Asset Platform
 ---
 
-Welcome to New API.
+Welcome to Kapon AI Docs.

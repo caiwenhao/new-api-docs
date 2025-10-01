@@ -4,7 +4,7 @@
     [Jina AI Rerank](https://jina.ai/reranker)
 
 !!! note "Standard Format"
-    In New API, Jina AI's rerank format is adopted as the standard format. All other vendors' (such as Xinference, Cohere, etc.) rerank responses will be formatted to Jina AI's format to provide a unified development experience.
+    On Kapon Cloud, Jina AI's rerank format is adopted as the standard format. All other vendors' (such as Xinference, Cohere, etc.) rerank responses will be formatted to Jina AI's format to provide a unified development experience.
 
 ## 📝 Introduction
 

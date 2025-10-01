@@ -1,7 +1,7 @@
 # Xinference 重排序格式（Rerank）
 
 !!! warning "重要提示"
-    在New API中，Xinference的rerank响应结构将被格式化为Jina的rerank响应结构，使用方式和Jina的rerank相同。**对于Dify等客户端用户**：在配置时请选择 **Jina AI** 作为供应商类型，而不是Xinference，并使用Xinference支持的模型名称。
+    在本平台中，Xinference 的 rerank 响应结构将被格式化为 Jina 的 rerank 响应结构，使用方式和 Jina 的 rerank 相同。**对于 Dify 等客户端用户**：在配置时请选择 **Jina AI** 作为供应商类型，而不是 Xinference，并使用 Xinference 支持的模型名称。
 
 ## 📝 简介
 

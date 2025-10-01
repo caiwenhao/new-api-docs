@@ -3,7 +3,7 @@
 !!! note "Please Note"
     This interface is **not an official Midjourney interface**, but rather a Midjourney proxy interface implemented based on the open-source project [**midjourney-proxy**](https://github.com/novicezk/midjourney-proxy) by author **novicezk**.
     
-    This project is divided into two versions, both of which New API has adapted:
+    This project is divided into two versions, both of which this platform has adapted:
     
     - Open Source Version [midjourney-proxy](https://github.com/novicezk/midjourney-proxy)
     

@@ -3,7 +3,7 @@
 !!! note "请你注意"
     该接口 **非Midjourney官方的接口**，而是基于作者 **novicezk** 的开源项目 [**midjourney-proxy**](https://github.com/novicezk/midjourney-proxy) 实现的midjourney代理接口。
     
-    该项目分为两个版本，New API 都已经适配：
+    该项目分为两个版本，本平台已适配：
     
     - 开源版 [midjourney-proxy](https://github.com/novicezk/midjourney-proxy)
     

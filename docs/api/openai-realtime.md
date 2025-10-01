@@ -67,7 +67,7 @@ Authorization: Bearer $NEW_API_KEY
   - `Content-Type: application/sdp`
 
 ### WebSocket 连接
-- URL: `wss://你的newapi服务器地址/v1/realtime`
+- URL: `wss://models.kapon.cloud/v1/realtime`
 - 查询参数: `model`
 - 请求头:
   - `Authorization: Bearer YOUR_API_KEY`
@@ -275,7 +275,7 @@ dc.send(JSON.stringify(responseCreate));
 ```javascript
 import WebSocket from "ws";
 
-const url = "wss://你的newapi服务器地址/v1/realtime?model=gpt-4o-realtime-preview-2024-12-17";
+const url = "wss://models.kapon.cloud/v1/realtime?model=gpt-4o-realtime-preview-2024-12-17";
 const ws = new WebSocket(url, {
   headers: {
     "Authorization": "Bearer " + process.env.NEW_API_KEY,
@@ -303,7 +303,7 @@ import websocket
 
 NEW_API_KEY = os.environ.get("NEW_API_KEY")
 
-url = "wss://你的newapi服务器地址/v1/realtime?model=gpt-4o-realtime-preview-2024-12-17"
+url = "wss://models.kapon.cloud/v1/realtime?model=gpt-4o-realtime-preview-2024-12-17"
 headers = [
     "Authorization: Bearer " + NEW_API_KEY,
     "OpenAI-Beta: realtime=v1"
@@ -335,7 +335,7 @@ ws.run_forever()
 */
 
 const ws = new WebSocket(
-  "wss://你的newapi服务器地址/v1/realtime?model=gpt-4o-realtime-preview-2024-12-17",
+  "wss://models.kapon.cloud/v1/realtime?model=gpt-4o-realtime-preview-2024-12-17",
   [
     "realtime",
     // 认证

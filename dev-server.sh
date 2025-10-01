@@ -2,11 +2,19 @@
 
 # Development server script after switching to mkdocs-static-i18n
 
-# Ensure mkdocs-static-i18n plugin is installed inside container
-if ! pip show mkdocs-static-i18n >/dev/null 2>&1; then
-  echo "📦 Installing mkdocs-static-i18n plugin..."
-  pip install --no-cache-dir mkdocs-static-i18n[material]
-fi
+# Ensure required MkDocs plugins are installed inside container
+ensure_pkg() {
+  pkg="$1"; shift
+  if ! pip show "$pkg" >/dev/null 2>&1; then
+    echo "📦 Installing $pkg ..."
+    pip install --no-cache-dir "$@"
+  fi
+}
+
+ensure_pkg mkdocs-static-i18n mkdocs-static-i18n[material]
+ensure_pkg mkdocs-git-revision-date-localized-plugin mkdocs-git-revision-date-localized-plugin
+ensure_pkg mkdocs-glightbox mkdocs-glightbox
+ensure_pkg mkdocs-minify-plugin mkdocs-minify-plugin
 
 echo "🚀 Starting development server with i18n (hot-reload)..."
 

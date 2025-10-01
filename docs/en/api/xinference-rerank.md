@@ -1,7 +1,7 @@
 # Xinference Rerank Format
 
 !!! warning "Important Note"
-    In New API, Xinference's rerank response structure will be formatted as Jina's rerank response structure, with the same usage as Jina's rerank. **For Dify and other client users**: When configuring, please select **Jina AI** as the provider type, not Xinference, and use the model names supported by Xinference.
+    On Kapon Cloud, Xinference's rerank response structure will be formatted as Jina's rerank response structure, with the same usage as Jina's rerank. **For Dify and other client users**: When configuring, please select **Jina AI** as the provider type, not Xinference, and use the model names supported by Xinference.
 
 ## 📝 Introduction
 

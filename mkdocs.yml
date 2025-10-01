@@ -87,10 +87,12 @@ extra:
   generator: false
 
 nav:
-  - 首页: index.html
+  - 首页: index.md
+  - 控制台: https://models.kapon.cloud/
   - API 文档:
     - 🏠 API 概览: api/index.md
     - 🔑 认证方式: api/authentication.md
+    - 📘 OpenAPI 参考: api/reference.md
     - 💬 对话接口:
       - OpenAI Chat: api/openai-chat.md
       - OpenAI Responses: api/openai-responses.md
@@ -155,9 +157,11 @@ plugins:
           site_name: "Kapon AI API Documentation"
           nav_translations:
             首页: Home
+            控制台: Console
             "API 文档": "API Documentation"
             "🏠 API 概览": "API Overview"
             "🔑 认证方式": "Authentication"
+            "📘 OpenAPI 参考": "OpenAPI Reference"
             "💬 对话接口": "Chat APIs"
             "OpenAI Chat": "OpenAI Chat"
             "OpenAI Responses": "OpenAI Responses"
@@ -191,11 +195,22 @@ plugins:
             "💡 最佳实践": "Best Practices"
             "提示词工程": "Prompt Engineering"
             "错误处理": "Error Handling"
+            "性能优化": "Performance Optimization"
+            "🧩 实战案例": "Use Cases"
+            "聊天机器人": "Chatbot"
+            "内容生成器": "Content Generator"
+            "智能翻译": "Translation"
 
             "帮助支持": "Support"
             "🏠 帮助中心": "Help Center"
             "❓ 常见问题": "FAQ"
             "💰 定价方案": "Pricing Plans"
+
+  - git-revision-date-localized:
+      fallback_to_build_date: true
+  - glightbox
+  - minify:
+      minify_html: true
 
 markdown_extensions:
   - abbr
